@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
-	"$basetexture"					"models\weapons\arccw\uc_lynx\drgordon\mw2r_vector\victor_barlong"
-	"$bumpmap"					"models\weapons\arccw\uc_lynx\drgordon\mw2r_vector\victor_barlong_n"
+	"$basetexture"					"models\weapons\arccw\uc_lynx\drgordon\weapons\mw2r_vector\victor_barlong"
+	"$bumpmap"					"models\weapons\arccw\uc_lynx\drgordon\weapons\mw2r_vector\victor_barlong_n"
 
 	"$phong"	"1"
 	"$phongexponent"	"3"

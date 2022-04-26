@@ -141,31 +141,52 @@ SWEP.AttachmentElements = {
 	},
 
 	["noch"] = {
-		VMBodygroups = {{ind = 1, bg = 1}},
+		VMBodygroups = {
+			{ind = 1, bg = 1}
+		},
 	},
 	["muzzle"] = {
-		VMBodygroups = {{ind = 2, bg = 3}},
+		VMBodygroups = {
+			{ind = 2, bg = 3}
+		},
 	},
 	["uc_lynx_barrel_extended"] = {
-		VMBodygroups = {{ind = 2, bg = 2}},
+		VMBodygroups = {
+			{ind = 2, bg = 2}
+		},
 	},
 	["uc_lynx_barrel_sd"] = {
-		VMBodygroups = {{ind = 2, bg = 1}},
+		VMBodygroups = {
+			{ind = 2, bg = 1}
+		},
 	},
 	["uc_lynx_mag_50"] = {
-		VMBodygroups = {{ind = 3, bg = 2}},
+		VMBodygroups = {
+			{ind = 3, bg = 2},
+			{ind = 4, bg = 2},
+		},
 	},
 	["uc_lynx_mag_36"] = {
-		VMBodygroups = {{ind = 3, bg = 3}},
+		VMBodygroups = {
+			{ind = 3, bg = 3},
+			{ind = 4, bg = 3},
+		},
 	},
 	["uc_lynx_caliber_45"] = {
-		VMBodygroups = {{ind = 3, bg = 1}},
+		VMBodygroups = {
+			{ind = 3, bg = 1},
+			{ind = 4, bg = 1},
+		},
 	},
 	["uc_lynx_stock_compact"] = {
-		VMBodygroups = {{ind = 4, bg = 2}},
+		VMBodygroups = {
+			{ind = 5, bg = 2}
+		},
 	},
 	["uc_lynx_stock_none"] = {
-		VMBodygroups = {{ind = 4, bg = 1}},
+		VMBodygroups = {
+			{ind = 5, bg = 1}
+		},
 	},
 }
 
@@ -290,7 +311,7 @@ SWEP.Attachments = {
 }
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
-	local SLOT = wep.Attachments[6].Installed
+	local SLOT = wep.Attachments[7].Installed
 	local SLOT2 = wep.Attachments[2].Installed
 	if SLOT == "uc_lynx_mag_50" then ---xmag---
 		if anim == "reload_empty" then
