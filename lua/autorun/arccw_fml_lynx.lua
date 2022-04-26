@@ -36,21 +36,21 @@ sound.Add({
 
 sound.Add({
 	name = 			"Weapon_FML_Lynx.Foley1",
-	channel = 		CHAN_ITEM,
+	channel = 		CHAN_AUTO,
 	volume = 		1.0,
 	sound = 			"weapons/arccw_uc_lynx/uni_weapon_raise_01.wav"
 })
 
 sound.Add({
 	name = 			"Weapon_FML_Lynx.Foley2",
-	channel = 		CHAN_ITEM,
+	channel = 		CHAN_AUTO,
 	volume = 		1.0,
 	sound = 			"weapons/arccw_uc_lynx/uni_weapon_iron_out.wav"
 })
 
 sound.Add({
 	name = 			"Weapon_FML_Lynx.Foley3",
-	channel = 		CHAN_ITEM,
+	channel = 		CHAN_AUTO,
 	volume = 		1.0,
 	sound = 			"weapons/arccw_uc_lynx/m16_hit.wav"
 })

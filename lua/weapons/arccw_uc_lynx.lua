@@ -439,7 +439,7 @@ SWEP.Animations = {
 		SoundTable = {
 			{s = "Weapon_FML_Lynx.Foley1", 			t = 2/60 },
 			{s = "Weapon_FML_Lynx.Out",				t = 30/60 },
-			{s = "Weapon_FML_Lynx.In", 				t = 65/60 },
+			{s = "Weapon_FML_Lynx.In", 				t = 70/60 },
 			{s = "Weapon_FML_Lynx.Foley2",			t = 84/60 },
 		},
 	},
@@ -451,11 +451,11 @@ SWEP.Animations = {
 		LHIKIn = 0.35,
 		LHIKOut = 0.35,
 		SoundTable = {
-			{s = "Weapon_FML_Lynx.Foley1",			t = 0/60 },
 			{s = "Weapon_FML_Lynx.Out",				t = 14/60 },
+			{s = "Weapon_FML_Lynx.Foley1",			t = 30/60 },
 			{s = "Weapon_FML_Lynx.Foley3",			t = 32/60 },
-			{s = "Weapon_FML_Lynx.In",				t = 57/60 },
-			{s = "Weapon_FML_Lynx.Bolt2",			t = 90/60 },
+			{s = "Weapon_FML_Lynx.In",				t = 75/60 },
+			{s = "Weapon_FML_Lynx.Bolt2",			t = 130/60 },
 			{s = "Weapon_FML_Lynx.Foley2",			t = 105/60 },
 		},
 	},
@@ -467,7 +467,7 @@ SWEP.Animations = {
 			LHIKIn = 0.8,
 			LHIKOut = 0.8,
 			SoundTable = {
-				{s = "Weapon_FML_Lynx.Foley1",			t = 0/60 },
+				{s = "Weapon_FML_Lynx.Foley1",			t = 25/60 },
 				{s = "Weapon_FML_Lynx.Out",				t = 30/60 },
 				{s = "Weapon_FML_Lynx.Foley3",			t = 48/60 },
 				{s = "Weapon_FML_Lynx.In",				t = 81/60 },
