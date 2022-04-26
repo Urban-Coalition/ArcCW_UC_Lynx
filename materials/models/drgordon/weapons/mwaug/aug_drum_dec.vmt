@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture"					"models\drgordon\weapons\mwaug\aug_drum_dec"
+
+	"$translucent"	"1"
+}

@@ -1,0 +1,422 @@
+SWEP.Base = "arccw_base"
+SWEP.Spawnable = true -- this obviously has to be set to true
+SWEP.Category = "ArcCW - Urban Coalition" -- edit this if you like
+SWEP.AdminOnly = false
+
+SWEP.PrintName = "Lynx CQ300"
+SWEP.TrueName = "Honey Badger"
+SWEP.Trivia_Class = "Personal Defense Weapon"
+SWEP.Trivia_Desc = "Versatile PDW that is often configured integrally suppressed. Chambered in .300 AAC Blackout, it is designed to have the ease of use and similarity of an AR-15, but the portability of an MP5. This one can be modified to accept various calibers of ammunition, from .45 ACP to .50 Beuwolf."
+SWEP.Trivia_Manufacturer = "Advanced Armament Corporation"
+SWEP.Trivia_Calibre = ".300 AAC Blackout"
+SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
+SWEP.Trivia_Country = "USA"
+SWEP.Trivia_Year = 2011
+
+SWEP.Slot = 2
+
+if GetConVar("arccw_truenames"):GetBool() then
+	SWEP.PrintName = SWEP.TrueName
+end
+
+SWEP.UseHands = true
+
+SWEP.ViewModel = "models/weapons/arccw/fml/c_pflio_lynx.mdl"
+SWEP.WorldModel = "models/weapons/arccw/fml/w_pflio_lynx.mdl"
+SWEP.ViewModelFOV = 80
+
+SWEP.MirrorVMWM = true
+SWEP.WorldModelOffset = {
+	pos        =    Vector(-8, 4, -7.5),
+	ang        =    Angle(-6, 0, 180),
+	bone    =    "ValveBiped.Bip01_R_Hand",
+}
+
+SWEP.Damage = 39
+SWEP.DamageMin = 17
+SWEP.RangeMin = 40
+SWEP.Range = 220
+SWEP.Penetration = 12
+SWEP.DamageType = DMG_BULLET
+SWEP.ShootEntity = nil
+SWEP.MuzzleVelocity = 720
+SWEP.PhysBulletMuzzleVelocity = 720
+-- IN M/S
+
+SWEP.ChamberSize = 1
+SWEP.Primary.ClipSize = 30
+
+SWEP.Recoil = 0.6
+SWEP.RecoilSide = 0.3
+SWEP.RecoilRise = 1
+SWEP.VisualRecoilMult = 0.5
+SWEP.RecoilPunch = -1
+SWEP.RecoilPunchBackMax = 2
+SWEP.RecoilPunchBackMaxSights = 1
+
+SWEP.Delay = 60 / 800
+SWEP.Num = 1
+SWEP.Firemodes = {
+	{
+		Mode = 2,
+	},
+	{
+		Mode = 1,
+	},
+	{
+		Mode = 0
+	}
+}
+
+SWEP.NPCWeaponType = {"weapon_ar2","weapon_smg1"}
+SWEP.NPCWeight = 200
+
+SWEP.AccuracyMOA = 6
+SWEP.HipDispersion = 550
+SWEP.MoveDispersion = 250
+
+SWEP.Primary.Ammo = "smg1"
+SWEP.MagID = "stanag"
+
+SWEP.ShootVol = 115
+SWEP.ShootPitch = 100
+SWEP.ShootPitchVariation = 0.04
+
+SWEP.ShootSound = ")^weapons/fml_private_lynx/fire_308.wav"
+SWEP.ShootSoundSilenced = ")^weapons/fml_private_lynx/m4a1_suppressed_fp.wav"
+SWEP.DistantShootSound = ")^weapons/arccw_ud/m16/" .. "dist.ogg"
+
+SWEP.MuzzleEffect = "muzzleflash_1"
+SWEP.ShellModel = "models/shells/shell_762nato.mdl"
+SWEP.ShellScale = 1.25
+
+SWEP.MuzzleEffectAttachment = 1
+SWEP.CaseEffectAttachment = 2
+
+SWEP.SpeedMult = 0.925
+SWEP.SightedSpeedMult = 0.80
+SWEP.ShootSpeedMult = 0.9
+SWEP.SightTime = 0.5
+
+SWEP.ProceduralRegularFire = false
+SWEP.ProceduralIronFire = false
+
+SWEP.CaseBones = {}
+
+SWEP.IronSightStruct = {
+	Pos = Vector(-3.5, -2, -0.28),
+	Ang = Angle(-0.138, 0, 0),
+	Magnification = 1.1,
+}
+
+SWEP.HoldtypeHolstered = "passive"
+SWEP.HoldtypeActive = "ar2"
+SWEP.HoldtypeSights = "rpg"
+
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
+
+SWEP.ActivePos = Vector(-0.25, 1.5, 0) --- fuck blender viewport ---
+SWEP.ActiveAng = Angle(0, 0, -3)
+
+SWEP.HolsterPos = Vector(0, -2, -0.5)
+SWEP.HolsterAng = Angle(-4.633, 36.881, -10)
+
+SWEP.SprintPos = Vector(0,0,0)
+SWEP.SprintAng = Angle(0,0,0)
+
+SWEP.CrouchPos = Vector(-6, 0, 0.5)
+SWEP.CrouchAng = Angle(0, 0, -45)
+
+SWEP.BarrelLength = 24
+
+SWEP.DefaultBodygroups = "000000000000000"
+
+SWEP.AttachmentElements = {
+	["skin_ta"] = { --- delete this when upload so magenta dont hunt for my ass ---
+		VMSkin = 1,
+		WMSkin = 1,
+	},
+
+	["noch"] = {
+		VMBodygroups = {{ind = 1, bg = 1}},
+		WMBodygroups = {{ind = 1, bg = 1}},
+	},
+	["muzzle"] = {
+		VMBodygroups = {{ind = 2, bg = 3}},
+		WMBodygroups = {{ind = 2, bg = 3}},
+	},
+	["uc_lynx_barrel_extended"] = {
+		VMBodygroups = {{ind = 2, bg = 2}},
+		WMBodygroups = {{ind = 2, bg = 2}},
+	},
+	["uc_lynx_barrel_sd"] = {
+		VMBodygroups = {{ind = 2, bg = 1}},
+		WMBodygroups = {{ind = 2, bg = 1}},
+	},
+	["uc_lynx_mag_50"] = {
+		VMBodygroups = {{ind = 3, bg = 2}},
+		WMBodygroups = {{ind = 3, bg = 2}},
+	},
+	["uc_lynx_mag_36"] = {
+		VMBodygroups = {{ind = 3, bg = 3}},
+		WMBodygroups = {{ind = 3, bg = 3}},
+	},
+	["uc_lynx_caliber_45"] = {
+		VMBodygroups = {{ind = 3, bg = 1}},
+		WMBodygroups = {{ind = 3, bg = 1}},
+	},
+}
+
+SWEP.CustomizePos = Vector(9.824, 5, -4.897)
+SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
+
+SWEP.ExtraSightDist = 3
+
+SWEP.Attachments = {
+	{
+		PrintName = "Optic",
+		DefaultAttName = "Iron Sights",
+		Slot = {"optic_sniper", "optic", "optic_lp"},
+		Bone = "weapon",
+		Offset = {
+			vpos = Vector(0, 5.5, -5.8),
+			vang = Angle(90,-90, 90),
+			wpos = Vector(7, 0.5, -6.5),
+			wang = Angle(-10, 0, 180)
+		},
+		CorrectiveAng = Angle(180, 0, 0),
+		InstalledEles = {"noch"},
+		ExtraSightDist = 3
+	},
+	{
+		PrintName = "Caliber",
+		DefaultAttName = ".300 AAC Blackout",
+		DefaultAttIcon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips"),
+		Slot = "uc_lynx_caliber",
+	},
+	{
+		PrintName = "Muzzle",
+		DefaultAttName = "Standard Muzzle",
+		Slot = {"muzzle", "uc_lynx_muzzle"}, --- shouldve make a different whisperer barrel ---
+		Bone = "weapon",
+		Offset = {
+			vpos = Vector(0, 15, -4.2),
+			vang = Angle(90, -90, 90),
+			wpos = Vector(19, 0.689, -6.8),
+			wang = Angle(-9, 0, 180)
+		},
+		CorrectiveAng = Angle(180, 0, 0),		--- for unique optic attachment	---
+	},
+	{
+		PrintName = "Underbarrel",
+		Slot = "foregrip", "ubgl", "bipod",
+		Bone = "weapon",
+		Offset = {
+			vpos = Vector(0, 12, -5),
+			vang = Angle(90, -90, 90),
+			wpos = Vector(17, 0.6, -4.676),
+			wang = Angle(-10, 0, 180)
+		},
+		SlideAmount = {
+			vmin = Vector(0, 10.1, -3.15),
+			vmax = Vector(0, 13.6, -3.15),
+			wmin = Vector(12, 0.832, -4.5),
+			wmax = Vector(18, 0.832, -5.2),
+		},
+		InstalledEles = {"grip"},
+		CorrectiveAng = Angle(180, 0, 0),
+	},
+	{
+		PrintName = "Tactical",
+		Slot = "tac",
+		Bone = "weapon",
+		Offset = {
+			vpos = Vector(1, 15, -4.2),
+			vang = Angle(0, -90, 90),
+			wpos = Vector(15, -0.1, -6.5),
+			wang = Angle(-8.829, -0.556, 90)
+		},
+		ExtraSightDist = 20,
+		CorrectivePos = Vector(2, -2, 3)
+	},
+	{
+		PrintName = "Magazine",
+		Slot = {"uc_lynx_mag"},
+		DefaultAttName = "30-Round Mag",
+		DefaultAttIcon = Material("entities/att/acwatt_ud_m16_mag_30.png", "smooth mips"),
+		ExcludeFlags = {"uc_lynx_caliber_45"}
+	},
+	{
+		PrintName = "Ammo Type",
+		DefaultAttName = "\"FMJ\" Full Metal Jacket",
+		DefaultAttIcon = Material("entities/att/arccw_uc_ammo_generic.png", "mips smooth"),
+		Slot = "uc_ammo",
+	},
+	{
+		PrintName = "Powder Load",
+		Slot = "uc_powder",
+		DefaultAttName = "Standard Load"
+	},
+	{
+		PrintName = "Training Package",
+		Slot = "uc_tp",
+		DefaultAttName = "Basic Training"
+	},
+	{
+		PrintName = "Internals",
+		Slot = "uc_fg", -- Fire group
+		DefaultAttName = "Standard Internals"
+	},
+	{
+		PrintName = "Charm",
+		Slot = "charm",
+		FreeSlot = true,
+		Bone = "weapon",
+		Offset = {
+			vpos = Vector(-0.8, 8, -4.2),
+			vang = Angle(90, -90, 90),
+			wpos = Vector(6.099, 1.1, -3.301),
+			wang = Angle(171.817, 180-1.17, 0),
+		},
+		CorrectiveAng = Angle(180, 0, 0),
+	},
+}
+
+SWEP.Hook_SelectReloadAnimation = function(wep, anim)
+	local SLOT = wep.Attachments[6].Installed
+	if SLOT == "uc_lynx_mag_50" then ---xmag---
+		if anim == "reload_empty" then
+			return "reload_empty_762"
+		elseif anim == "reload" then
+			return "reload_762"
+		end
+	elseif SLOT == "uc_lynx_caliber_45" then ---rmag---
+		if anim == "reload_empty" then
+			return "reload_empty_45"
+		elseif anim == "reload" then
+			return "reload_45"
+		end
+	end
+end
+
+SWEP.Hook_Think = ArcCW.UD.ADSReload
+
+SWEP.ReloadInSights = true
+SWEP.LockSightsInReload = false
+
+SWEP.MeleeTime = 0.7
+SWEP.MeleeAttackTime = 0.2
+
+local path = ")^weapons/arccw_ud/m16/"
+local common = ")^/arccw_uc/common/"
+local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
+local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
+
+SWEP.Animations = {
+	["idle"] = {
+		Source = "idle",
+		Time = 0,
+	},
+	["bash"] = {
+		Source = {"melee", "melee2"},
+		Time = 1,
+		LHIK = true,
+		LHIKIn = 0.15,
+		LHIKOut = 0.25,
+	},
+	["enter_sprint"] = {
+		Source = "sprint",
+		Time = 0.6,
+	},
+	["idle_sprint"] = {
+		Source = "sprint",
+		Time = 0.6,
+	},
+	["exit_sprint"] = {
+		Source = "sprint_out",
+		Time = 0.6,
+	},
+	["draw"] = {
+		Source = "draw",
+		Time = 1,
+		SoundTable = {{s = "weapons/arccw/ak47/ak47_draw.wav", t = 0}},
+	},
+	["ready"] = {
+		Source = "deploy_r",
+		Time = 2,
+	},
+	["fire"] = {
+		Source = "iron",
+		Time = 0.2,
+		ShellEjectAt = 0,
+	},
+	["fire_iron"] = {
+		Source = "iron",
+		Time = 0.2,
+		ShellEjectAt = 0,
+	},
+	["reload"] = {
+		Source = "wet",
+		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+		Time = 2.5,
+		LHIK = true,
+		LHIKIn = 0.35,
+		LHIKOut = 0.35,
+		SoundTable = {
+			{s = rottle, 							t = 1.00 },
+			{s = rottle,							t = 1.5 },
+			{s = rottle, 							t = 2.00 },
+			{s = rottle,							t = 2.5 },
+			--{s = common .. "magpouch.ogg",			t = 0.60 },
+			--{s = common .. "rifle_magdrop.ogg", 	t = 0.80 },
+			--{s = common .. "grab.ogg",				t = 1.90 },
+			--{s = common .. "shoulder.ogg",			t = 2.00 },
+		},
+	},
+	["reload_empty"] = {
+		Source = "dry_soh",
+		Time = 3,
+		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+		LHIK = true,
+		LHIKIn = 0.35,
+		LHIKOut = 0.35,
+		SoundTable = {
+			{s = rottle, 							t = 0.00 },
+			{s = ratel,								t = 0.25 },
+			{s = common .. "magpouch.ogg",			t = 0.60 },
+			{s = common .. "rifle_magdrop.ogg", 	t = 0.80 },
+			{s = common .. "grab.ogg",				t = 1.90 },
+			{s = common .. "shoulder.ogg",			t = 2.00 },
+		},
+	},
+		["reload_762"] = {
+			Source = "wet_762",
+			Time = 2.9 * 1.2,
+			TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+			LHIK = true,
+			LHIKIn = 0.8,
+			LHIKOut = 0.8,
+		},
+		["reload_empty_762"] = {
+			Source = "dry_762",
+			Time = 3.5 * 1.2,
+			TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+			LHIK = true,
+			LHIKIn = 0.5,
+			LHIKOut = 0.35,
+		},
+	["reload_45"] = {
+		Source = "wet_45",
+		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+		LHIK = true,
+		LHIKIn = 0.35,
+		LHIKOut = 0.35,
+	},
+	["reload_empty_45"] = {
+		Source = "dry_45_soh",
+		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+		LHIK = true,
+		LHIKIn = 0.35,
+		LHIKOut = 0.35,
+	},
+}
