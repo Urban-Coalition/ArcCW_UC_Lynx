@@ -18,7 +18,7 @@
 	"$phong" "1"						
 	"$phongboost"	"1.25"
 	"$phongexponent" 6
-	"$phongwarptexture"		"models\saraphines/EFT attachments\phongwarp1"
+	"$phongwarptexture"		"models\weapons\arccw\uc_lynx\phongwarp1"
 	"$phongexponenttexture" "models\weapons\arccw\uc_lynx/upper_exp"
 
 
@@ -26,7 +26,7 @@
 	"$phongtint" 			"[1 1 1.31]"
 	"$PhongAlbedoTint" "1"
 
-	"$detail" 				"models\models\weapons\arccw\uc_lynx\detail_metal"
+	"$detail" 				"models\weapons\arccw\uc_lynx\detail_metal"
 	"$detailscale" 			"2"
 	"$detailblendfactor" 		"1"
 	"$detailblendmode" 		"0"
