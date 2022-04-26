@@ -1,13 +1,12 @@
 "VertexLitGeneric"
 {
-	"$basetexture" "models\saraphines\honeybadger\cq300/silencer"
-	"$bumpmap" "models\saraphines\honeybadger\cq300\silencer_norm"
+	"$basetexture" "models\weapons\arccw\uc_lynx/lower_2"
+	"$bumpmap" "models\weapons\arccw\uc_lynx\lower_norm"
 	"$ambientocclusion" 1
-    "$ambientoccltexture" "models\saraphines\honeybadger\cq300\silencer_mask"	
+    "$ambientoccltexture" "models\weapons\arccw\uc_lynx\lower_mask"	
 	"$halflambert" "1"
-	"$blendTintByBaseAlpha"	"1"
-	
 	$color2 0.0.0
+	"$blendTintByBaseAlpha"	"1"
 
 	$normalmapalphaenvmapmask 1
 	
@@ -20,15 +19,15 @@
 	"$phongboost"	"1.25"
 	"$phongexponent" 6
 	"$phongwarptexture"		"models\saraphines/EFT attachments\phongwarp1"
-	"$phongexponenttexture" "models\saraphines\honeybadger\cq300/silencer_exp"
+	"$phongexponenttexture" "models\weapons\arccw\uc_lynx/lower_exp"
 
 
-	"$phongfresnelranges"	"[0.05 0.5 1]"
+	"$phongfresnelranges"	"[0.05 7 1]"
 	"$phongtint" 			"[1 1.2 1.31]"
 	"$PhongAlbedoTint" "1"
 
-	"$detail" 				"models\saraphines\EFT attachments\detail_metal"
-	"$detailscale" 			"3"
+	"$detail" 				"models\models\weapons\arccw\uc_lynx\detail_metal"
+	"$detailscale" 			"2"
 	"$detailblendfactor" 		"1"
 	"$detailblendmode" 		"0"
 	"$nocull" 1

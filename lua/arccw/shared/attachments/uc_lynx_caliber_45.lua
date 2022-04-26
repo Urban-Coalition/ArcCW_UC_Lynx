@@ -24,6 +24,6 @@ att.Mult_Precision = 0.8
 
 att.Hook_GetShootSound = function(wep, anim)
 	if !wep:GetBuff_Override("Silencer") then
-		return ")^weapons/fml_private_lynx/fire_45.wav"
+		return ")^weapons/arccw_uc_lynx/fire_45.wav"
 	end
 end

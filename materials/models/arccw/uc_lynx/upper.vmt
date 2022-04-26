@@ -1,9 +1,9 @@
 "VertexLitGeneric"
 {
-	"$basetexture" "models\saraphines\honeybadger\cq300/upper"
-	"$bumpmap" "models\saraphines\honeybadger\cq300\upper_norm"
+	"$basetexture" "models\weapons\arccw\uc_lynx/upper"
+	"$bumpmap" "models\weapons\arccw\uc_lynx\upper_norm"
 	"$ambientocclusion" 1
-    "$ambientoccltexture" "models\saraphines\honeybadger\cq300\upper_mask"	
+    "$ambientoccltexture" "models\weapons\arccw\uc_lynx\upper_mask"	
 	"$halflambert" "1"
 	$color2 0.0.0
 	"$blendTintByBaseAlpha"	"1"
@@ -19,14 +19,14 @@
 	"$phongboost"	"1.25"
 	"$phongexponent" 6
 	"$phongwarptexture"		"models\saraphines/EFT attachments\phongwarp1"
-	"$phongexponenttexture" "models\saraphines\honeybadger\cq300/upper_exp"
+	"$phongexponenttexture" "models\weapons\arccw\uc_lynx/upper_exp"
 
 
 	"$phongfresnelranges"	"[0.05 0.5 1]"
 	"$phongtint" 			"[1 1 1.31]"
 	"$PhongAlbedoTint" "1"
 
-	"$detail" 				"models\saraphines\EFT attachments\detail_metal"
+	"$detail" 				"models\models\weapons\arccw\uc_lynx\detail_metal"
 	"$detailscale" 			"2"
 	"$detailblendfactor" 		"1"
 	"$detailblendmode" 		"0"

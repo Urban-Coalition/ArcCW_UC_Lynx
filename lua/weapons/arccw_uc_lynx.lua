@@ -82,11 +82,11 @@ SWEP.ShootVol = 115
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0.04
 
-local path = ")^weapons/fml_private_lynx/"
+local path = ")^weapons/arccw_uc_lynx/"
 local path1 = ")^weapons/arccw_ud/uzi/"
 local common = ")^/arccw_uc/common/"
 SWEP.ShootSound = {path .. "fire-01.wav", path .. "fire-02.wav", path .. "fire-03.wav", path .. "fire-04.wav", path .. "fire-05.wav", path .. "fire-06.wav"}
-SWEP.ShootSoundSilenced = ")^weapons/fml_private_lynx/m4a1_suppressed_fp.wav"
+SWEP.ShootSoundSilenced = ")^weapons/arccw_uc_lynx/m4a1_suppressed_fp.wav"
 SWEP.DistantShootSound = {path .. "fire-dist-01.wav", path .. "fire-dist-02.wav", path .. "fire-dist-03.wav", path .. "fire-dist-04.wav", path .. "fire-dist-05.wav", path .. "fire-dist-06.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_1"

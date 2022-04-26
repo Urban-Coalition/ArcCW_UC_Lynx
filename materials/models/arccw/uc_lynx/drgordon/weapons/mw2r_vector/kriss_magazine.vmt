@@ -1,12 +1,12 @@
 "VertexLitGeneric"
 {
-	"$basetexture"					"models\drgordon\weapons\mwaug\aug_drum"
-	"$bumpmap"					"models\drgordon\weapons\mwaug\aug_drum_n"
+	"$basetexture"					"models\weapons\arccw\uc_lynx\drgordon\mw2r_vector\kriss_magazine"
+	"$bumpmap"					"models\weapons\arccw\uc_lynx\drgordon\mw2r_vector\kriss_magazine_n"
 
 	"$phong"	"1"
 	"$phongexponent"	"3"
 	"$phongalbedotint"	"1"
-	"$phongboost"	"0.1"
+	"$phongboost"	"0.3"
 	"$phongfresnelranges"	"[1 1 1]"
         "$phongdisablehalflambert"  "1"
 

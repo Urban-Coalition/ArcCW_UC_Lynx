@@ -37,6 +37,6 @@ att.Override_Firemodes = {
 
 att.Hook_GetShootSound = function(wep, anim)
 	if !wep:GetBuff_Override("Silencer") then
-		return ")^weapons/fml_private_lynx/fire_127.wav"
+		return ")^weapons/arccw_uc_lynx/fire_127.wav"
 	end
 end
