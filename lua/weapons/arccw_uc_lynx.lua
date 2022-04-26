@@ -21,8 +21,8 @@ end
 
 SWEP.UseHands = true
 
-SWEP.ViewModel		=	"models/weapons/arccw/c_uc_lynx3.mdl"
-SWEP.WorldModel		=	"models/weapons/arccw/c_uc_lynx3.mdl"
+SWEP.ViewModel		=	"models/weapons/arccw/c_uc_lynx.mdl"
+SWEP.WorldModel		=	"models/weapons/arccw/c_uc_lynx.mdl"
 SWEP.ViewModelFOV	=	80
 
 SWEP.MirrorVMWM = true
