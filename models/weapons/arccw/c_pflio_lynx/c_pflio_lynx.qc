@@ -48,12 +48,12 @@ $contents "solid"
 
 $illumposition 2.5 -11.404 -11.282
 
-$cdmaterials "models\arccw\uc_lynx\"
-$cdmaterials "models\arccw\uc_lynx\drgordon\mwaug\"
-$cdmaterials "models\arccw\uc_lynx\drgordon\mw2r_vector\"
-$cdmaterials "models\arccw\uc_lynx\drgordon\m4\"
-$cdmaterials "models\arccw\uc_lynx\drgordon\m4t\"
-$cdmaterials "models\arccw\uc_lynx\drgordon\mw2019_oden\"
+$cdmaterials "models\weapons\arccw\uc_lynx\"
+$cdmaterials "models\weapons\arccw\uc_lynx\drgordon\mwaug\"
+$cdmaterials "models\weapons\arccw\uc_lynx\drgordon\mw2r_vector\"
+$cdmaterials "models\weapons\arccw\uc_lynx\drgordon\m4\"
+$cdmaterials "models\weapons\arccw\uc_lynx\drgordon\m4t\"
+$cdmaterials "models\weapons\arccw\uc_lynx\drgordon\mw2019_oden\"
 
 $attachment "1" "muzzle" 0 0 0 rotate -90 0 0
 $attachment "2" "eject" 0 0 0 rotate 0 0 -180
