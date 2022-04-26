@@ -82,9 +82,12 @@ SWEP.ShootVol = 115
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0.04
 
-SWEP.ShootSound = ")^weapons/fml_private_lynx/fire_308.wav"
+local path = ")^weapons/fml_private_lynx/"
+local path1 = ")^weapons/arccw_ud/uzi/"
+local common = ")^/arccw_uc/common/"
+SWEP.ShootSound = {path .. "fire-01.wav", path .. "fire-02.wav", path .. "fire-03.wav", path .. "fire-04.wav", path .. "fire-05.wav", path .. "fire-06.wav"}
 SWEP.ShootSoundSilenced = ")^weapons/fml_private_lynx/m4a1_suppressed_fp.wav"
-SWEP.DistantShootSound = ")^weapons/arccw_ud/m16/" .. "dist.ogg"
+SWEP.DistantShootSound = {path .. "fire-dist-01.wav", path .. "fire-dist-02.wav", path .. "fire-dist-03.wav", path .. "fire-dist-04.wav", path .. "fire-dist-05.wav", path .. "fire-dist-06.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_762nato.mdl"
@@ -307,7 +310,6 @@ SWEP.LockSightsInReload = false
 SWEP.MeleeTime = 0.7
 SWEP.MeleeAttackTime = 0.2
 
-local path = ")^weapons/arccw_ud/m16/"
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
@@ -349,11 +351,13 @@ SWEP.Animations = {
 		Source = "iron",
 		Time = 0.2,
 		ShellEjectAt = 0,
+		SoundTable = {{ s = {path .. "mech-01.wav", path .. "mech-02.wav", path .. "mech-03.wav", path .. "mech-04.wav", path .. "mech-05.wav", path .. "mech-06.wav"}, t = 0 }},
 	},
 	["fire_iron"] = {
 		Source = "iron",
 		Time = 0.2,
 		ShellEjectAt = 0,
+		SoundTable = {{ s = {path .. "mech-01.wav", path .. "mech-02.wav", path .. "mech-03.wav", path .. "mech-04.wav", path .. "mech-05.wav", path .. "mech-06.wav"}, t = 0 }},
 	},
 	["reload"] = {
 		Source = "wet",
