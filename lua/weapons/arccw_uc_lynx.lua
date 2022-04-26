@@ -355,7 +355,7 @@ SWEP.Animations = {
 		Time = 1,
 	},
 	["ready"] = {
-		Source = "deploy_r",
+		Source = "deploy",
 		Time = 2,
 		SoundTable = {
 			{s = "Weapon_FML_Lynx.Stock",			t = 16/60 },
