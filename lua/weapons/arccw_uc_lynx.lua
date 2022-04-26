@@ -86,11 +86,7 @@ local path = ")^weapons/arccw_uc_lynx/"
 local path1 = ")^weapons/arccw_ud/uzi/"
 local common = ")^/arccw_uc/common/"
 SWEP.ShootSound = {path .. "fire-01.wav", path .. "fire-02.wav", path .. "fire-03.wav", path .. "fire-04.wav", path .. "fire-05.wav", path .. "fire-06.wav"}
-<<<<<<< Updated upstream
-SWEP.ShootSoundSilenced = ")^weapons/arccw_uc_lynx/m4a1_suppressed_fp.wav"
-=======
 SWEP.ShootSoundSilenced = {path .. "fire-sup-01.wav", path .. "fire-sup-02.wav", path .. "fire-sup-03.wav", path .. "fire-sup-04.wav", path .. "fire-sup-05.wav", path .. "fire-sup-06.wav"}
->>>>>>> Stashed changes
 SWEP.DistantShootSound = {path .. "fire-dist-01.wav", path .. "fire-dist-02.wav", path .. "fire-dist-03.wav", path .. "fire-dist-04.wav", path .. "fire-dist-05.wav", path .. "fire-dist-06.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_1"
