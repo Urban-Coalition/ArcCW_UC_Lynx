@@ -85,9 +85,41 @@ SWEP.ShootPitchVariation = 0.04
 local path = ")^weapons/arccw_uc_lynx/"
 local path1 = ")^weapons/arccw_ud/uzi/"
 local common = ")^/arccw_uc/common/"
-SWEP.ShootSound = {path .. "fire-01.wav", path .. "fire-02.wav", path .. "fire-03.wav", path .. "fire-04.wav", path .. "fire-05.wav", path .. "fire-06.wav"}
-SWEP.ShootSoundSilenced = {path .. "fire-sup-01.wav", path .. "fire-sup-02.wav", path .. "fire-sup-03.wav", path .. "fire-sup-04.wav", path .. "fire-sup-05.wav", path .. "fire-sup-06.wav"}
-SWEP.DistantShootSound = {path .. "fire-dist-01.wav", path .. "fire-dist-02.wav", path .. "fire-dist-03.wav", path .. "fire-dist-04.wav", path .. "fire-dist-05.wav", path .. "fire-dist-06.wav"}
+SWEP.ShootSound = {
+	path .. "fire-01.wav",
+	path .. "fire-02.wav",
+	path .. "fire-03.wav", 
+	path .. "fire-04.wav",
+	path .. "fire-05.wav",
+	path .. "fire-06.wav"
+}
+SWEP.ShootSoundSilenced = {
+	path .. "fire-sup-01.wav",
+	path .. "fire-sup-02.wav",
+	path .. "fire-sup-03.wav",
+	path .. "fire-sup-04.wav",
+	path .. "fire-sup-05.wav",
+	path .. "fire-sup-06.wav"
+}
+SWEP.DistantShootSoundOutdoors = {
+	path .. "fire-dist-01.wav",
+	path .. "fire-dist-02.wav",
+	path .. "fire-dist-03.wav",
+	path .. "fire-dist-04.wav",
+	path .. "fire-dist-05.wav",
+	path .. "fire-dist-06.wav"
+}
+SWEP.DistantShootSoundIndoors = {
+	path .. "fire-dist-int-01.wav",
+	path .. "fire-dist-int-02.wav",
+	path .. "fire-dist-int-03.wav",
+	path .. "fire-dist-int-04.wav",
+	path .. "fire-dist-int-05.wav",
+	path .. "fire-dist-int-06.wav"
+}
+SWEP.DistantShootSoundOutdoorsVolume = 1
+SWEP.DistantShootSoundIndoorsVolume = 1
+SWEP.Hook_AddShootSound = ArcCW.UD.InnyOuty
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_762nato.mdl"
