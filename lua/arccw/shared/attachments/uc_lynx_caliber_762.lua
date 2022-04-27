@@ -12,8 +12,8 @@ att.SortOrder = 0762
 att.Override_Ammo = "ar2"
 --att.Mult_ClipSize = 1 same diameter
 
-att.Mult_Recoil = 1.1
-att.Mult_RecoilSide = 0.4
+att.Mult_Recoil = 1.5
+att.Mult_RecoilSide = 1.5
 
 att.Mult_AccuracyMOA = 0.85
 

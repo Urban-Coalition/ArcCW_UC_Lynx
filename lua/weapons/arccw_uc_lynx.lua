@@ -406,28 +406,44 @@ SWEP.Animations = {
 	["draw"] = {
 		Source = "draw",
 		Time = 1,
+		SoundTable = ArcCW.UD.DrawSounds
+	},
+	["holster"] = {
+		--Source = "draw",
+		--Time = 1,
+		ProcHolster = true,
+		SoundTable = ArcCW.UD.HolsterSounds
 	},
 	["ready"] = {
 		Source = "deploy",
-		Time = 2,
+		Time = 1.6,
 		SoundTable = {
-			{s = "Weapon_FML_Lynx.Stock",			t = 16/60 },
-			{s = "Weapon_FML_Lynx.Bolt1",			t = 49/60 },
-			{s = "Weapon_FML_Lynx.Bolt2",			t = 63/60 },
-			{s = "Weapon_FML_Lynx.Foley2",			t = 86/60 },
+			{s = "Weapon_FML_Lynx.Stock",			t = 6/60 },
+			{s = "Weapon_FML_Lynx.Bolt1",			t = 31/60 },
+			{s = "Weapon_FML_Lynx.Bolt2",			t = 48/60 },
+			{s = "Weapon_FML_Lynx.Foley2",			t = 66/60 },
 		},
 	},
 	["fire"] = {
 		Source = "iron",
 		Time = 0.2,
 		ShellEjectAt = 0,
-		SoundTable = {{ s = {path .. "mech-01.wav", path .. "mech-02.wav", path .. "mech-03.wav", path .. "mech-04.wav", path .. "mech-05.wav", path .. "mech-06.wav"}, t = 0 }},
+		SoundTable = {
+			{ s = {path .. "mech-01.wav",
+				path .. "mech-02.wav",
+				path .. "mech-03.wav",
+				path .. "mech-04.wav",
+				path .. "mech-05.wav",
+				path .. "mech-06.wav"
+			}, t = 0 }},
 	},
-	["fire_iron"] = {
+	["fire_empty"] = {
 		Source = "iron",
 		Time = 0.2,
 		ShellEjectAt = 0,
-		SoundTable = {{ s = {path .. "mech-01.wav", path .. "mech-02.wav", path .. "mech-03.wav", path .. "mech-04.wav", path .. "mech-05.wav", path .. "mech-06.wav"}, t = 0 }},
+		SoundTable = {
+			{ s = ")^weapons/arccw_ud/m16/mech_last.ogg", t = 0 }
+		},
 	},
 	["reload"] = {
 		Source = "wet",
