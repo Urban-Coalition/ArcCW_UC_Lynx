@@ -1,6 +1,6 @@
-att.PrintName = "36-Round Mag"
+att.PrintName = "40-Round Mag"
 att.Icon = Material("entities/att/thisnuts.png", "smooth mips")
-att.Description = "36-round magazine. A bit heavier."
+att.Description = "40-round magazine. A bit heavier."
 att.Desc_Pros = {}
 att.Desc_Cons = {
     "uc.jam"
@@ -8,10 +8,10 @@ att.Desc_Cons = {
 att.Desc_Neutrals = {}
 att.AutoStats = true
 att.Slot = "uc_lynx_mag"
-att.SortOrder = 36
+att.SortOrder = 40
 att.HideIfBlocked = true
 
-att.Override_ClipSize = 36
+att.Override_ClipSize = 40
 
 att.Mult_SightTime = 1.1
 att.Mult_ReloadTime = 1.1
