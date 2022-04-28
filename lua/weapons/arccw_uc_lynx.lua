@@ -78,6 +78,13 @@ SWEP.MoveDispersion = 250
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "stanag"
 
+SWEP.HeatCapacity = 150
+SWEP.HeatDissipation = 10
+SWEP.HeatDelayTime = 3
+
+SWEP.MalfunctionMean = 200
+SWEP.MalfunctionTakeRound = false
+
 SWEP.ShootVol = 115
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0.04
@@ -401,6 +408,15 @@ SWEP.Animations = {
 		SoundTable = {
 			{s = "Weapon_FML_Lynx.Foley1", 			t = 0/60 },
 			{s = "Weapon_FML_Lynx.Foley2",			t = 43/60 },
+		},
+	},
+	["fix"] = {
+		Source = "deploy",
+		Time = 1.6,
+		SoundTable = {
+			{s = "Weapon_FML_Lynx.Bolt1",			t = 31/60 },
+			{s = "Weapon_FML_Lynx.Bolt2",			t = 48/60 },
+			{s = "Weapon_FML_Lynx.Foley2",			t = 66/60 },
 		},
 	},
 	["draw"] = {
