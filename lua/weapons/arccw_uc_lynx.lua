@@ -458,7 +458,7 @@ SWEP.Animations = {
 		Time = 0.2,
 		ShellEjectAt = 0,
 		SoundTable = {
-			{ s = ")^weapons/arccw_ud/m16/mech_last.ogg", t = 0 }
+			{ s = path.. "mech-last.wav", t = 0 }
 		},
 	},
 	["reload"] = {
