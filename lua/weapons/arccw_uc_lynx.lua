@@ -458,8 +458,18 @@ SWEP.Animations = {
 		Time = 0.2,
 		ShellEjectAt = 0,
 		SoundTable = {
+<<<<<<< Updated upstream
 			{ s = path.. "mech-last.wav", t = 0 }
 		},
+=======
+			{ s = {path .. "mech-last-01.wav",
+				path .. "mech-last-02.wav",
+				path .. "mech-last-03.wav",
+				path .. "mech-last-04.wav",
+				path .. "mech-last-05.wav",
+				path .. "mech-last-06.wav"
+			}, t = 0 }},
+>>>>>>> Stashed changes
 	},
 	["reload"] = {
 		Source = "wet",
@@ -499,9 +509,9 @@ SWEP.Animations = {
 			LHIKIn = 0.8,
 			LHIKOut = 0.8,
 			SoundTable = {
-				{s = "Weapon_FML_Lynx.Foley1",			t = 25/60 },
+				{s = "Weapon_FML_Lynx.Foley3",			t = 0/60 },
 				{s = "Weapon_FML_Lynx.Out",				t = 30/60 },
-				{s = "Weapon_FML_Lynx.Foley3",			t = 48/60 },
+				{s = "Weapon_FML_Lynx.Foley1",			t = 48/60 },
 				{s = "Weapon_FML_Lynx.In",				t = 81/60 },
 				{s = "Weapon_FML_Lynx.Foley3",			t = 99/60 },
 				{s = "Weapon_FML_Lynx.Foley2",			t = 123/60 },
@@ -515,13 +525,13 @@ SWEP.Animations = {
 			LHIKIn = 0.5,
 			LHIKOut = 0.35,
 			SoundTable = {
-				{s = "Weapon_FML_Lynx.Foley1",			t = 0/60 },
+				{s = "Weapon_FML_Lynx.Foley3",			t = 0/60 },
 				{s = "Weapon_FML_Lynx.Out",				t = 30/60 },
-				{s = "Weapon_FML_Lynx.Foley3",			t = 48/60 },
+				{s = "Weapon_FML_Lynx.Foley1",			t = 48/60 },
 				{s = "Weapon_FML_Lynx.In",				t = 81/60 },
 				{s = "Weapon_FML_Lynx.Foley3",			t = 99/60 },
-				{s = "Weapon_FML_Lynx.Bolt1",			t = 145/60 },
-				{s = "Weapon_FML_Lynx.Bolt2",			t = 160/60 },
+				{s = "Weapon_FML_Lynx.Bolt1",			t = 165/60 },
+				{s = "Weapon_FML_Lynx.Bolt2",			t = 185/60 },
 				{s = "Weapon_FML_Lynx.Foley2",			t = 175/60 },
 			},
 		},
