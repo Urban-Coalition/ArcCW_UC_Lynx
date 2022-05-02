@@ -458,10 +458,6 @@ SWEP.Animations = {
 		Time = 0.2,
 		ShellEjectAt = 0,
 		SoundTable = {
-<<<<<<< Updated upstream
-			{ s = path.. "mech-last.wav", t = 0 }
-		},
-=======
 			{ s = {path .. "mech-last-01.wav",
 				path .. "mech-last-02.wav",
 				path .. "mech-last-03.wav",
@@ -469,7 +465,6 @@ SWEP.Animations = {
 				path .. "mech-last-05.wav",
 				path .. "mech-last-06.wav"
 			}, t = 0 }},
->>>>>>> Stashed changes
 	},
 	["reload"] = {
 		Source = "wet",
