@@ -1,6 +1,7 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Urban Coalition" -- edit this if you like
+SWEP.UC_CategoryPack = "5Urban One-offs"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Lynx CQ300"
