@@ -368,7 +368,7 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 	end
 end
 
-SWEP.Hook_Think = ArcCW.UD.ADSReload
+SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 SWEP.ReloadInSights = true
 SWEP.LockSightsInReload = false
