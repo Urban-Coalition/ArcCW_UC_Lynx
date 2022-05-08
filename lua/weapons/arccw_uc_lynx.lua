@@ -24,7 +24,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel		=	"models/weapons/arccw/c_uc_lynx.mdl"
 SWEP.WorldModel		=	"models/weapons/arccw/c_uc_lynx.mdl"
-SWEP.ViewModelFOV	=	80
+SWEP.ViewModelFOV	=	75
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -158,8 +158,8 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(-0.25, 1.5, 0) --- fuck blender viewport ---
-SWEP.ActiveAng = Angle(0, 0, -3)
+SWEP.ActivePos = Vector(-0.25, 1, -0.12)
+SWEP.ActiveAng = Angle(0, 0, -4)
 
 SWEP.HolsterPos = Vector(0, -2, -0.5)
 SWEP.HolsterAng = Angle(-4.633, 36.881, -10)
@@ -175,11 +175,6 @@ SWEP.BarrelLength = 24
 SWEP.DefaultBodygroups = "000000000000000"
 
 SWEP.AttachmentElements = {
-	["skin_ta"] = { --- delete this when upload so magenta dont hunt for my ass ---
-		VMSkin = 1,
-		WMSkin = 1,
-	},
-
 	["noch"] = {
 		VMBodygroups = {
 			{ind = 1, bg = 1}
