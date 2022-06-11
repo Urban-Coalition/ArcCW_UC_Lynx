@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture 						"models\ma85_mwr\weapons\lynx\wpn_h1_asl_cq300_receiver_lower_col"
-	$bumpmap 							"models\ma85_mwr\weapons\lynx\wpn_h1_asl_cq300_receiver_lower_nml"
+	$basetexture 						"models\weapons\arccw\uc_lynx\wpn_h1_asl_cq300_receiver_lower_col"
+	$bumpmap 							"models\weapons\arccw\uc_lynx\wpn_h1_asl_cq300_receiver_lower_nml"
 
 	$phong                      		1
 	$phongexponent                      "10"

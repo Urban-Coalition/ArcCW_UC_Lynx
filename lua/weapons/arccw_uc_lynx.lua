@@ -24,7 +24,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel		=	"models/weapons/arccw/c_uc_lynx.mdl"
 SWEP.WorldModel		=	"models/weapons/arccw/c_uc_lynx.mdl"
-SWEP.ViewModelFOV	=	75
+SWEP.ViewModelFOV	=	70
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -158,8 +158,11 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(-0.25, 1, -0.12)
-SWEP.ActiveAng = Angle(0, 0, -4)
+SWEP.ActivePos = Vector(0.33, 0, 1)
+SWEP.ActiveAng = Angle(0, 0, -3)
+
+SWEP.CustomizePos = Vector(5, -2, -2)
+SWEP.CustomizeAng = Angle(15, 25, 0)
 
 SWEP.HolsterPos = Vector(0, -2, -0.5)
 SWEP.HolsterAng = Angle(-4.633, 36.881, -10)
