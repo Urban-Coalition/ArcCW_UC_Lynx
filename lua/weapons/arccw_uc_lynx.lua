@@ -201,19 +201,19 @@ SWEP.AttachmentElements = {
 	["uc_lynx_mag_50"] = {
 		VMBodygroups = {
 			{ind = 3, bg = 2},
-			{ind = 4, bg = 2},
+			--{ind = 4, bg = 2},
 		},
 	},
 	["uc_lynx_mag_36"] = {
 		VMBodygroups = {
 			{ind = 3, bg = 3},
-			{ind = 4, bg = 3},
+			--{ind = 4, bg = 3},
 		},
 	},
 	["uc_lynx_caliber_45"] = {
 		VMBodygroups = {
 			{ind = 3, bg = 1},
-			{ind = 4, bg = 1},
+			--{ind = 4, bg = 1},
 		},
 	},
 	["uc_lynx_stock_compact"] = {
@@ -353,15 +353,15 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 	local SLOT2 = wep.Attachments[2].Installed
 	if SLOT == "uc_lynx_mag_50" then ---xmag---
 		if anim == "reload_empty" then
-			return "reload_empty_762"
+			return "reload_empty_100"
 		elseif anim == "reload" then
-			return "reload_762"
+			return "reload_100"
 		end
-	elseif SLOT2 == "uc_lynx_caliber_45" then ---rmag---
+	elseif SLOT == "uc_lynx_mag_40" then ---rmag---
 		if anim == "reload_empty" then
-			return "reload_empty_45"
+			return "reload_empty_40"
 		elseif anim == "reload" then
-			return "reload_45"
+			return "reload_40"
 		end
 	end
 end
@@ -466,7 +466,7 @@ SWEP.Animations = {
 			}, t = 0 }},
 	},
 	["reload"] = {
-		Source = "wet",
+		Source = "reload",
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		Time = 2.5,
 		LHIK = true,
@@ -480,7 +480,7 @@ SWEP.Animations = {
 		},
 	},
 	["reload_empty"] = {
-		Source = "dry",
+		Source = "reload_empty",
 		Time = 3,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
@@ -495,8 +495,8 @@ SWEP.Animations = {
 			{s = "Weapon_FML_Lynx.Foley2",			t = 105/60 },
 		},
 	},
-		["reload_762"] = {
-			Source = "wet_762",
+		["reload_100"] = {
+			Source = "reload_100",
 			Time = 2.9 * 1.2,
 			TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 			LHIK = true,
@@ -511,8 +511,8 @@ SWEP.Animations = {
 				{s = "Weapon_FML_Lynx.Foley2",			t = 123/60 },
 			},
 		},
-		["reload_empty_762"] = {
-			Source = "dry_762",
+		["reload_empty_100"] = {
+			Source = "reload_empty_100",
 			Time = 3.5 * 1.2,
 			TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 			LHIK = true,
@@ -529,8 +529,8 @@ SWEP.Animations = {
 				{s = "Weapon_FML_Lynx.Foley2",			t = 175/60 },
 			},
 		},
-	["reload_45"] = {
-		Source = "wet_45",
+	["reload_40"] = {
+		Source = "reload_40",
 		Time = 2.1,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
@@ -543,8 +543,8 @@ SWEP.Animations = {
 			{s = "Weapon_FML_Lynx.Foley2",			t = 84/60 },
 		},
 	},
-	["reload_empty_45"] = {
-		Source = "dry_45",
+	["reload_empty_40"] = {
+		Source = "reload_empty_40",
 		Time = 3,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
