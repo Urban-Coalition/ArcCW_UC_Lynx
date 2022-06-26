@@ -147,8 +147,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-	Pos = Vector(-3.5, -2, -0.25),
-	Ang = Angle(-0.338, 0, 0),
+	Pos = Vector(-2.805, -5, 1.35),
+	Ang = Angle(-0.3, 0, 0),
 	Magnification = 1.1,
 }
 
@@ -158,7 +158,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0.33, 0, 1)
+SWEP.ActivePos = Vector(0.33, -2, 1.5)
 SWEP.ActiveAng = Angle(0, 0, -3)
 
 SWEP.CustomizePos = Vector(5, -2, -2)
@@ -185,7 +185,7 @@ SWEP.AttachmentElements = {
 	},
 	["muzzle"] = {
 		VMBodygroups = {
-			{ind = 2, bg = 3}
+			{ind = 2, bg = 2}
 		},
 	},
 	["uc_lynx_barrel_extended"] = {
@@ -228,9 +228,6 @@ SWEP.AttachmentElements = {
 	},
 }
 
-SWEP.CustomizePos = Vector(9.824, 5, -4.897)
-SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
-
 SWEP.ExtraSightDist = 3
 
 SWEP.Attachments = {
@@ -238,16 +235,12 @@ SWEP.Attachments = {
 		PrintName = "Optic",
 		DefaultAttName = "Iron Sights",
 		Slot = {"optic_sniper", "optic", "optic_lp"},
-		Bone = "weapon",
+		Bone = "m16_parent",
 		Offset = {
-			vpos = Vector(0, 5.5, -5.8),
-			vang = Angle(90,-90, 90),
-			wpos = Vector(7, 0.5, -6.5),
-			wang = Angle(-10, 0, 180)
+			vpos = Vector(0, -1.5, 4),
+			vang = Angle(90, 0, -90),
 		},
-		CorrectiveAng = Angle(180, 0, 0),
 		InstalledEles = {"noch"},
-		ExtraSightDist = 3
 	},
 	{
 		PrintName = "Caliber",
@@ -258,31 +251,25 @@ SWEP.Attachments = {
 	{
 		PrintName = "Muzzle",
 		DefaultAttName = "Standard Muzzle",
-		Slot = {"muzzle", "uc_lynx_muzzle"}, --- shouldve make a different whisperer barrel ---
-		Bone = "weapon",
+		Slot = {"muzzle", "uc_lynx_muzzle"},
+		Bone = "m16_parent",
 		Offset = {
-			vpos = Vector(0, 15, -4.2),
-			vang = Angle(90, -90, 90),
-			wpos = Vector(19, 0.689, -6.8),
-			wang = Angle(-9, 0, 180)
+			vpos = Vector(0, 0, 15.5),
+			vang = Angle(90, 0, -90),
 		},
-		CorrectiveAng = Angle(180, 0, 0),		--- for unique optic attachment	---
+		InstalledEles = {"muzzle"},
 	},
 	{
 		PrintName = "Underbarrel",
 		Slot = "foregrip", "ubgl", "bipod",
-		Bone = "weapon",
+		Bone = "m16_parent",
 		Offset = {
-			vpos = Vector(0, 12, -5),
-			vang = Angle(90, -90, 90),
-			wpos = Vector(17, 0.6, -4.676),
-			wang = Angle(-10, 0, 180)
+			vpos = Vector(0, 0, 0),
+			vang = Angle(90, 0, -90),
 		},
 		SlideAmount = {
-			vmin = Vector(0, 10.1, -3.15),
-			vmax = Vector(0, 13.6, -3.15),
-			wmin = Vector(12, 0.832, -4.5),
-			wmax = Vector(18, 0.832, -5.2),
+			vmin = Vector(0, 1.2, 9),
+			vmax = Vector(0, 1.2, 13.5),
 		},
 		InstalledEles = {"grip"},
 		CorrectiveAng = Angle(180, 0, 0),
@@ -290,12 +277,10 @@ SWEP.Attachments = {
 	{
 		PrintName = "Tactical",
 		Slot = "tac",
-		Bone = "weapon",
+		Bone = "m16_parent",
 		Offset = {
 			vpos = Vector(1, 15, -4.2),
 			vang = Angle(0, -90, 90),
-			wpos = Vector(15, -0.1, -6.5),
-			wang = Angle(-8.829, -0.556, 90)
 		},
 		ExtraSightDist = 20,
 		CorrectivePos = Vector(2, -2, 3)
@@ -337,7 +322,7 @@ SWEP.Attachments = {
 		PrintName = "Charm",
 		Slot = "charm",
 		FreeSlot = true,
-		Bone = "weapon",
+		Bone = "m16_parent",
 		Offset = {
 			vpos = Vector(-0.8, 8, -4.2),
 			vang = Angle(90, -90, 90),
@@ -430,7 +415,7 @@ SWEP.Animations = {
 		SoundTable = ArcCW.UD.HolsterSounds
 	},
 	["ready"] = {
-		Source = "deploy",
+		Source = "fix",
 		Time = 1.6,
 		SoundTable = {
 			{s = "Weapon_FML_Lynx.Stock",			t = 6/60 },
@@ -470,13 +455,14 @@ SWEP.Animations = {
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		Time = 2.5,
 		LHIK = true,
-		LHIKIn = 0.35,
-		LHIKOut = 0.35,
+		LHIKIn = 0.2,
+		LHIKOut = 0.75,
+		LHIKEaseOut = 0.3,
 		SoundTable = {
-			{s = "Weapon_FML_Lynx.Foley1", 			t = 2/60 },
-			{s = "Weapon_FML_Lynx.Out",				t = 30/60 },
-			{s = "Weapon_FML_Lynx.In", 				t = 60/60 },
-			{s = "Weapon_FML_Lynx.Foley2",			t = 84/60 },
+			{s = "Weapon_FML_Lynx.Foley1", 			t = 0.0 },
+			{s = "Weapon_FML_Lynx.Out",				t = 0.2 },
+			{s = "Weapon_FML_Lynx.In", 				t = 1.1 },
+			{s = "Weapon_FML_Lynx.Foley2",			t = 1.7 },
 		},
 	},
 	["reload_empty"] = {
@@ -484,15 +470,16 @@ SWEP.Animations = {
 		Time = 3,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
-		LHIKIn = 0.35,
-		LHIKOut = 0.35,
+		LHIKIn = 0.2,
+		LHIKOut = 0.75,
+		LHIKEaseOut = 0.3,
 		SoundTable = {
-			{s = "Weapon_FML_Lynx.Out",				t = 14/60 },
-			{s = "Weapon_FML_Lynx.Foley1",			t = 30/60 },
-			{s = "Weapon_FML_Lynx.Foley3",			t = 32/60 },
-			{s = "Weapon_FML_Lynx.In",				t = 70/60 },
-			{s = "Weapon_FML_Lynx.Bolt2",			t = 135/60 },
-			{s = "Weapon_FML_Lynx.Foley2",			t = 105/60 },
+			{s = "Weapon_FML_Lynx.Foley1",			t = 0.0 },
+			{s = "Weapon_FML_Lynx.Out",				t = 0.2 },
+			{s = "Weapon_FML_Lynx.In",				t = 1.1 },
+			{s = "Weapon_FML_Lynx.Foley2",			t = 1.7 },
+			{s = "Weapon_FML_Lynx.Bolt2",			t = 2.0 },
+			{s = "Weapon_FML_Lynx.Foley3",			t = 2.1 },
 		},
 	},
 		["reload_100"] = {
@@ -500,8 +487,9 @@ SWEP.Animations = {
 			Time = 2.9 * 1.2,
 			TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 			LHIK = true,
-			LHIKIn = 0.8,
-			LHIKOut = 0.8,
+			LHIKIn = 0.2,
+			LHIKOut = 0.75,
+			LHIKEaseOut = 0.3,
 			SoundTable = {
 				{s = "Weapon_FML_Lynx.Foley3",			t = 0/60 },
 				{s = "Weapon_FML_Lynx.Out",				t = 30/60 },
@@ -516,8 +504,9 @@ SWEP.Animations = {
 			Time = 3.5 * 1.2,
 			TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 			LHIK = true,
-			LHIKIn = 0.5,
-			LHIKOut = 0.35,
+			LHIKIn = 0.2,
+			LHIKOut = 0.75,
+			LHIKEaseOut = 0.3,
 			SoundTable = {
 				{s = "Weapon_FML_Lynx.Foley3",			t = 0/60 },
 				{s = "Weapon_FML_Lynx.Out",				t = 30/60 },
@@ -534,8 +523,9 @@ SWEP.Animations = {
 		Time = 2.1,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
-		LHIKIn = 0.35,
-		LHIKOut = 0.35,
+		LHIKIn = 0.2,
+		LHIKOut = 0.6,
+		LHIKEaseOut = 0.3,
 		SoundTable = {
 			{s = "Weapon_FML_Lynx.Foley1",			t = 2/60 },
 			{s = "Weapon_FML_Lynx.Out",				t = 30/60 },
@@ -548,8 +538,9 @@ SWEP.Animations = {
 		Time = 3,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
-		LHIKIn = 0.35,
-		LHIKOut = 0.35,
+		LHIKIn = 0.2,
+		LHIKOut = 0.6,
+		LHIKEaseOut = 0.3,
 		SoundTable = {
 			{s = "Weapon_FML_Lynx.Foley1",			t = 0/60 },
 			{s = "Weapon_FML_Lynx.Out",				t = 14/60 },
