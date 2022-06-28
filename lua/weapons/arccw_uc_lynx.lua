@@ -130,8 +130,8 @@ SWEP.DistantShootSoundIndoorsVolume = 1
 SWEP.Hook_AddShootSound = ArcCW.UD.InnyOuty
 
 SWEP.MuzzleEffect = "muzzleflash_1"
-SWEP.ShellModel = "models/shells/shell_762nato.mdl"
-SWEP.ShellScale = 1.25
+SWEP.ShellModel = "models/weapons/arccw/uc_shells/556x45.mdl" -- 300 blk is ugly broken weird looking
+SWEP.ShellScale = 1
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
@@ -342,7 +342,7 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 		elseif anim == "reload" then
 			return "reload_100"
 		end
-	elseif SLOT == "uc_lynx_mag_40" then ---rmag---
+	elseif SLOT == "uc_lynx_mag_36" then ---rmag---
 		if anim == "reload_empty" then
 			return "reload_empty_40"
 		elseif anim == "reload" then
@@ -519,22 +519,22 @@ SWEP.Animations = {
 			},
 		},
 	["reload_40"] = {
-		Source = "reload_40",
-		Time = 2.1,
+		Source = "reload_60",
+		Time = 2.5,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
 		LHIKIn = 0.2,
 		LHIKOut = 0.6,
 		LHIKEaseOut = 0.3,
 		SoundTable = {
-			{s = "Weapon_FML_Lynx.Foley1",			t = 2/60 },
-			{s = "Weapon_FML_Lynx.Out",				t = 30/60 },
-			{s = "Weapon_FML_Lynx.In",				t = 65/60 },
-			{s = "Weapon_FML_Lynx.Foley2",			t = 84/60 },
+			{s = "Weapon_FML_Lynx.Foley1", 			t = 0.0 },
+			{s = "Weapon_FML_Lynx.Out",				t = 0.2 },
+			{s = "Weapon_FML_Lynx.In", 				t = 1.1 },
+			{s = "Weapon_FML_Lynx.Foley2",			t = 1.7 },
 		},
 	},
 	["reload_empty_40"] = {
-		Source = "reload_empty_40",
+		Source = "reload_empty_60",
 		Time = 3,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
@@ -542,12 +542,12 @@ SWEP.Animations = {
 		LHIKOut = 0.6,
 		LHIKEaseOut = 0.3,
 		SoundTable = {
-			{s = "Weapon_FML_Lynx.Foley1",			t = 0/60 },
-			{s = "Weapon_FML_Lynx.Out",				t = 14/60 },
-			{s = "Weapon_FML_Lynx.Foley3",			t = 32/60 },
-			{s = "Weapon_FML_Lynx.In",				t = 57/60 },
-			{s = "Weapon_FML_Lynx.Bolt2",			t = 90/60 },
-			{s = "Weapon_FML_Lynx.Foley2",			t = 105/60 },
+			{s = "Weapon_FML_Lynx.Foley1",			t = 0.0 },
+			{s = "Weapon_FML_Lynx.Out",				t = 0.2 },
+			{s = "Weapon_FML_Lynx.In",				t = 1.1 },
+			{s = "Weapon_FML_Lynx.Foley2",			t = 1.7 },
+			{s = "Weapon_FML_Lynx.Bolt2",			t = 2.0 },
+			{s = "Weapon_FML_Lynx.Foley3",			t = 2.1 },
 		},
 	},
 }
