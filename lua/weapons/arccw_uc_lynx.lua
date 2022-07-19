@@ -272,7 +272,7 @@ SWEP.Attachments = {
 			vmax = Vector(0, 1.2, 13.5),
 		},
 		InstalledEles = {"grip"},
-		CorrectiveAng = Angle(180, 0, 0),
+		MergeSlots = {13},
 	},
 	{
 		PrintName = "Tactical",
@@ -331,6 +331,16 @@ SWEP.Attachments = {
 		},
 		CorrectiveAng = Angle(180, 0, 0),
 	},
+	{
+		PrintName = "M203 slot",
+		Slot = "ubgl",
+		Bone = "m16_parent",
+		Offset = {
+			vpos = Vector(0, 0.2, 8.7),
+			vang = Angle(90, 0, -90),
+		},
+		Hidden = true,
+	}
 }
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
@@ -409,9 +419,8 @@ SWEP.Animations = {
 		SoundTable = ArcCW.UD.DrawSounds
 	},
 	["holster"] = {
-		--Source = "draw",
-		--Time = 1,
-		ProcHolster = true,
+		Source = "holster",
+		Time = 1,
 		SoundTable = ArcCW.UD.HolsterSounds
 	},
 	["ready"] = {
@@ -425,8 +434,7 @@ SWEP.Animations = {
 		},
 	},
 	["fire"] = {
-		Source = "iron",
-		Time = 0.2,
+		Source = "fire",
 		ShellEjectAt = 0,
 		SoundTable = {
 			{ s = {path .. "mech-01.wav",
@@ -438,8 +446,7 @@ SWEP.Animations = {
 			}, t = 0 }},
 	},
 	["fire_empty"] = {
-		Source = "iron",
-		Time = 0.2,
+		Source = "fire_empty",
 		ShellEjectAt = 0,
 		SoundTable = {
 			{ s = {path .. "mech-last-01.wav",
