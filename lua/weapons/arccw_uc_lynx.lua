@@ -378,13 +378,6 @@ SWEP.Animations = {
 		Source = "idle",
 		Time = 0,
 	},
-	["bash"] = {
-		Source = {"melee", "melee2"},
-		Time = 1,
-		LHIK = true,
-		LHIKIn = 0.15,
-		LHIKOut = 0.25,
-	},
 	["enter_sprint"] = {
 		Source = "sprint",
 		Time = 0.6,
@@ -397,15 +390,8 @@ SWEP.Animations = {
 		Source = "sprint_out",
 		Time = 0.6,
 	},
-	["inspect"] = {
-		Source = "inspect",
-		SoundTable = {
-			{s = "Weapon_FML_Lynx.Foley1", 			t = 0/60 },
-			{s = "Weapon_FML_Lynx.Foley2",			t = 43/60 },
-		},
-	},
 	["fix"] = {
-		Source = "deploy",
+		Source = "fix",
 		Time = 1.6,
 		SoundTable = {
 			{s = "Weapon_FML_Lynx.Bolt1",			t = 31/60 },
@@ -426,6 +412,10 @@ SWEP.Animations = {
 	["ready"] = {
 		Source = "fix",
 		Time = 1.6,
+		LHIK = true,
+		LHIKIn = 0,
+		LHIKOut = 0.75,
+		LHIKEaseOut = 0.3,
 		SoundTable = {
 			{s = "Weapon_FML_Lynx.Stock",			t = 6/60 },
 			{s = "Weapon_FML_Lynx.Bolt1",			t = 31/60 },
