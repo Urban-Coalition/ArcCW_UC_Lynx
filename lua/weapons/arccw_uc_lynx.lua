@@ -261,7 +261,7 @@ SWEP.Attachments = {
 	},
 	{
 		PrintName = "Underbarrel",
-		Slot = "foregrip", "ubgl", "bipod",
+		Slot = "foregrip",
 		Bone = "m16_parent",
 		Offset = {
 			vpos = Vector(0, 0, 0),
@@ -333,7 +333,7 @@ SWEP.Attachments = {
 	},
 	{
 		PrintName = "M203 slot",
-		Slot = "ubgl",
+		Slot = "uc_ubgl",
 		Bone = "m16_parent",
 		Offset = {
 			vpos = Vector(0, 0.2, 8.7),
