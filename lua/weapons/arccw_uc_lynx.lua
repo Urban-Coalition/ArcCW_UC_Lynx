@@ -33,8 +33,8 @@ SWEP.WorldModelOffset = {
 	bone    =    "ValveBiped.Bip01_R_Hand",
 }
 
-SWEP.Damage = 39
-SWEP.DamageMin = 17
+SWEP.Damage = 40
+SWEP.DamageMin = 15
 SWEP.RangeMin = 40
 SWEP.Range = 220
 SWEP.Penetration = 12
