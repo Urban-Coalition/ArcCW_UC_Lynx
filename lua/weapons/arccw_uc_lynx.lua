@@ -96,7 +96,7 @@ local common = ")^/arccw_uc/common/"
 SWEP.ShootSound = {
 	path .. "fire-01.wav",
 	path .. "fire-02.wav",
-	path .. "fire-03.wav", 
+	path .. "fire-03.wav",
 	path .. "fire-04.wav",
 	path .. "fire-05.wav",
 	path .. "fire-06.wav"
@@ -127,7 +127,7 @@ SWEP.DistantShootSoundIndoors = {
 }
 SWEP.DistantShootSoundOutdoorsVolume = 1
 SWEP.DistantShootSoundIndoorsVolume = 1
-SWEP.Hook_AddShootSound = ArcCW.UD.InnyOuty
+SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/weapons/arccw/uc_shells/556x45.mdl" -- 300 blk is ugly broken weird looking
@@ -402,12 +402,12 @@ SWEP.Animations = {
 	["draw"] = {
 		Source = "draw",
 		Time = 1,
-		SoundTable = ArcCW.UD.DrawSounds
+		SoundTable = ArcCW.UC.DrawSounds
 	},
 	["holster"] = {
 		Source = "holster",
 		Time = 1,
-		SoundTable = ArcCW.UD.HolsterSounds
+		SoundTable = ArcCW.UC.HolsterSounds
 	},
 	["ready"] = {
 		Source = "fix",
