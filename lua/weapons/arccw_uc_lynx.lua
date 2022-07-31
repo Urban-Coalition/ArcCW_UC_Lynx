@@ -279,8 +279,8 @@ SWEP.Attachments = {
 		Slot = "tac",
 		Bone = "m16_parent",
 		Offset = {
-			vpos = Vector(1, 15, -4.2),
-			vang = Angle(0, -90, 90),
+			vpos = Vector(-1, 0, 12),
+			vang = Angle(90, 0, -180),
 		},
 		ExtraSightDist = 20,
 		CorrectivePos = Vector(2, -2, 3)
