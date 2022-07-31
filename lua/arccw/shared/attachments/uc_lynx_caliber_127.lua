@@ -10,7 +10,7 @@ att.Slot = "uc_lynx_caliber"
 att.SortOrder = 1270
 
 att.Override_Ammo = "ar2"
-att.Mult_ClipSize = (1/3)
+att.Mult_ClipSize = 1 / 3
 att.Override_DamageType = DMG_AIRBOAT + DMG_BLAST
 
 att.Mult_Recoil = 2
@@ -20,9 +20,9 @@ att.Mult_AccuracyMOA = 0.125
 att.Mult_RPM = 0.5
 att.Mult_Penetration = 3
 
-att.Mult_MuzzleVelocity = 1.5
-att.Mult_Damage = 2.3
-att.Mult_DamageMin = 2.3
+att.Override_PhysBulletMuzzleVelocity = 550
+att.Mult_Damage = 80 / 40
+att.Mult_DamageMin = 20 / 15
 att.Mult_Range = 0.85
 att.Mult_RangeMin = 0.85
 
