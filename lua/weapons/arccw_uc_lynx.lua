@@ -228,7 +228,7 @@ SWEP.AttachmentElements = {
 	},
 }
 
-SWEP.ExtraSightDist = 4
+SWEP.ExtraSightDist = 2
 
 SWEP.Attachments = {
 	{
@@ -282,8 +282,6 @@ SWEP.Attachments = {
 			vpos = Vector(-1, 0, 12),
 			vang = Angle(90, 0, -180),
 		},
-		ExtraSightDist = 20,
-		CorrectivePos = Vector(2, -2, 3)
 	},
 	{
 		PrintName = "Stock",
