@@ -1,5 +1,5 @@
 "UnlitGeneric" 
 { 
-    "$basetexture" "arccw/weaponicons/arccw_mifl_lynx" 
+    "$basetexture" "arccw/weaponicons/arccw_mifl_lynx"
     "$translucent" 1 
 } 
