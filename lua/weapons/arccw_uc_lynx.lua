@@ -8,7 +8,7 @@ SWEP.PrintName = "Lynx CQ300"
 SWEP.TrueName = "Honey Badger"
 SWEP.Trivia_Class = "Personal Defense Weapon"
 SWEP.Trivia_Desc = "Versatile PDW that is often configured integrally suppressed. Chambered in .300 AAC Blackout, it is designed to have the ease of use and similarity of an AR-15, but the portability of an MP5. This one can be modified to accept various calibers of ammunition, from .45 ACP to .50 Beuwolf."
-SWEP.Trivia_Manufacturer = "Advanced Armament Corporation"
+SWEP.Trivia_Manufacturer = "Q, LLC"
 SWEP.Trivia_Calibre = ".300 AAC Blackout"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
 SWEP.Trivia_Country = "USA"
@@ -47,13 +47,19 @@ SWEP.PhysBulletMuzzleVelocity = 720
 SWEP.ChamberSize = 1
 SWEP.Primary.ClipSize = 30
 
+
+SWEP.Recoil = 0.5
+SWEP.RecoilSide = 0.25
+
 SWEP.Recoil = 0.6
 SWEP.RecoilSide = 0.3
-SWEP.RecoilRise = 1
-SWEP.VisualRecoilMult = 0.5
-SWEP.RecoilPunch = -1
-SWEP.RecoilPunchBackMax = 2
-SWEP.RecoilPunchBackMaxSights = 1
+
+SWEP.RecoilRise = 0.1
+SWEP.RecoilPunch = 1
+SWEP.VisualRecoilMult = 1
+SWEP.MaxRecoilBlowback = 1
+SWEP.MaxRecoilPunch = 1
+SWEP.RecoilPunchBack = 1
 
 SWEP.Delay = 60 / 800
 SWEP.Num = 1
@@ -157,8 +163,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ActivePos = Vector(0, 0, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(5, -2, -2)
-SWEP.CustomizeAng = Angle(15, 25, 0)
+SWEP.CustomizePos = Vector(3, -3, 0)
+SWEP.CustomizeAng = Angle(11, 33, 0)
 
 SWEP.HolsterPos = Vector(-1, -1, 1.2)
 SWEP.HolsterAng = Angle(-15, 8, -10)
@@ -176,17 +182,19 @@ SWEP.DefaultBodygroups = "000000000000000"
 SWEP.AttachmentElements = {
 	["noch"] = {
 		VMBodygroups = {
-			{ind = 1, bg = 1}
+			{ind = 2, bg = 2}
 		},
 	},
-	["muzzle"] = {
+	["grip"] = {
 		VMBodygroups = {
-			{ind = 2, bg = 2}
+			{ind = 5, bg = 1}
 		},
 	},
 	["uc_lynx_barrel_extended"] = {
 		VMBodygroups = {
-			{ind = 2, bg = 2}
+			{ind = 1, bg = 1},
+			{ind = 2, bg = 1},
+			{ind = 3, bg = 1},
 		},
 	},
 	["uc_lynx_barrel_sd"] = {
@@ -196,20 +204,12 @@ SWEP.AttachmentElements = {
 	},
 	["uc_lynx_mag_50"] = {
 		VMBodygroups = {
-			{ind = 3, bg = 2},
-			--{ind = 4, bg = 2},
-		},
-	},
-	["uc_lynx_mag_36"] = {
-		VMBodygroups = {
-			{ind = 3, bg = 3},
-			--{ind = 4, bg = 3},
-		},
-	},
-	["uc_lynx_caliber_45"] = {
-		VMBodygroups = {
 			{ind = 3, bg = 1},
-			--{ind = 4, bg = 1},
+		},
+	},
+	["uc_lynx_mag_40"] = {
+		VMBodygroups = {
+			{ind = 3, bg = 2},
 		},
 	},
 	["uc_lynx_stock_compact"] = {
@@ -231,41 +231,42 @@ SWEP.Attachments = {
 		PrintName = "Optic",
 		DefaultAttName = "Iron Sights",
 		Slot = {"optic_sniper", "optic", "optic_lp"},
-		Bone = "m16_parent",
+		Bone = "wpn",
 		Offset = {
-			vpos = Vector(0, -1.5, 4),
-			vang = Angle(90, 0, -90),
+			vpos = Vector(0, 0.8, 2.5),
+			vang = Angle(0, -90, 0),
 		},
+		CorrectiveAng = Angle( 0, 180, 0 ),
 		InstalledEles = {"noch"},
 	},
 	{
-		PrintName = "Caliber",
-		DefaultAttName = ".300 AAC Blackout",
+		PrintName = "Barrel",
+		DefaultAttName = "7\" SBR Barrel",
 		DefaultAttIcon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips"),
-		Slot = "uc_lynx_caliber",
+		Slot = "uc_lynx_barrel",
 	},
 	{
 		PrintName = "Muzzle",
 		DefaultAttName = "Standard Muzzle",
-		Slot = {"muzzle", "uc_lynx_muzzle"},
-		Bone = "m16_parent",
+		Slot = "muzzle",
+		Bone = "wpn",
 		Offset = {
 			vpos = Vector(0, 0, 15.5),
-			vang = Angle(90, 0, -90),
+			vang = Angle(0, -90, 0),
 		},
 		InstalledEles = {"muzzle"},
 	},
 	{
 		PrintName = "Underbarrel",
 		Slot = "foregrip",
-		Bone = "m16_parent",
+		Bone = "wpn",
 		Offset = {
 			vpos = Vector(0, 0, 0),
-			vang = Angle(90, 0, -90),
+			vang = Angle(0, -90, 0),
 		},
 		SlideAmount = {
-			vmin = Vector(0, 1.2, 9),
-			vmax = Vector(0, 1.2, 13.5),
+			vmin = Vector(0, 5, 0.6),
+			vmax = Vector(0, 8, 0.6),
 		},
 		InstalledEles = {"grip"},
 		MergeSlots = {13},
@@ -273,11 +274,12 @@ SWEP.Attachments = {
 	{
 		PrintName = "Tactical",
 		Slot = "tac",
-		Bone = "m16_parent",
+		Bone = "wpn",
 		Offset = {
 			vpos = Vector(-1, 0, 12),
 			vang = Angle(90, 0, -180),
 		},
+		InstalledEles = {"grip"},
 	},
 	{
 		PrintName = "Stock",
@@ -328,12 +330,13 @@ SWEP.Attachments = {
 	{
 		PrintName = "M203 slot",
 		Slot = "uc_ubgl",
-		Bone = "m16_parent",
+		Bone = "wpn",
 		Offset = {
-			vpos = Vector(0, 0.2, 8.7),
-			vang = Angle(90, 0, -90),
+			vpos = Vector(0, 5.4, 1.5),
+			vang = Angle(0, -90, 0),
 		},
 		Hidden = true,
+		InstalledEles = {"grip"},
 	}
 }
 
@@ -454,9 +457,10 @@ SWEP.Animations = {
 		Time = 2.2,
 		MinProgress = 1.4,
 		LHIK = true,
+		LHIKEaseIn = 0.1,
 		LHIKIn = 0.2,
-		LHIKOut = 0.75,
-		LHIKEaseOut = 0.3,
+		LHIKOut = 0.6,
+		LHIKEaseOut = 0.2,
 		SoundTable = {
 			{s = rottle,							t = 0.0 },
 			{s = ratel,								t = 0.05 },
@@ -476,9 +480,10 @@ SWEP.Animations = {
 		MinProgress = 2.2,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
+		LHIKEaseIn = 0.1,
 		LHIKIn = 0.2,
-		LHIKOut = 0.75,
-		LHIKEaseOut = 0.3,
+		LHIKOut = 0.7,
+		LHIKEaseOut = 0.2,
 		SoundTable = {
 			{s = rottle,							t = 0.0 },
 			{s = ratel,								t = 0.05 },

@@ -1,13 +1,13 @@
-att.PrintName = "Extended Barrel"
+att.PrintName = "16\" Extended Barrel"
 att.Icon = Material("entities/acwatt_lynx_xbr.png")
-att.Description = "Long barrel for long range combat or suppressive fire potential."
+att.Description = "Longer barrel.. for longer range combat!"
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = "uc_lynx_muzzle"
-att.SortOrder = 1000
+att.Slot = "uc_lynx_barrel"
+att.SortOrder = 16
 
 att.Mult_ShootVol = 1.1
 
