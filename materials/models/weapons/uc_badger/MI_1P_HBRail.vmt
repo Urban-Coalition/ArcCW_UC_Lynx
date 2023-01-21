@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture					"models/weapons/uc_badger/t_1p_hbrail_d"
+	$bumpmap						"models/weapons/uc_badger/t_1p_hbrail_n"
+	$phongexponenttexture			"models/weapons/uc_badger/t_1p_hbrail_m"
+	
+	$phong							1
+	$phongboost						1
+	$phongfresnelranges				"[0.1 0.4 0.7]"
+}

@@ -22,9 +22,9 @@ end
 
 SWEP.UseHands = true
 
-SWEP.ViewModel		=	"models/weapons/arccw/c_uc_lynx.mdl"
-SWEP.WorldModel		=	"models/weapons/arccw/c_uc_lynx.mdl"
-SWEP.ViewModelFOV	=	70
+SWEP.ViewModel		=	"models/weapons/uc/badger.mdl"
+SWEP.WorldModel		=	"models/weapons/uc/badger.mdl"
+SWEP.ViewModelFOV	=	80
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -85,6 +85,7 @@ SWEP.HeatDelayTime = 3
 
 SWEP.MalfunctionMean = 200
 SWEP.MalfunctionTakeRound = false
+SWEP.MalfunctionPostFire = true
 
 SWEP.ShootVol = 115
 SWEP.ShootPitch = 100
@@ -131,24 +132,19 @@ SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/weapons/arccw/uc_shells/556x45.mdl" -- 300 blk is ugly broken weird looking
-SWEP.ShellScale = 1
+SWEP.ShellScale = .666
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
 
 SWEP.SpeedMult = 0.925
-SWEP.SightedSpeedMult = 0.80
-SWEP.ShootSpeedMult = 0.9
-SWEP.SightTime = 0.5
-
-SWEP.ProceduralRegularFire = false
-SWEP.ProceduralIronFire = false
-
-SWEP.CaseBones = {}
+SWEP.SightedSpeedMult = 0.75
+SWEP.ShootSpeedMult = 0.95
+SWEP.SightTime = 0.3
 
 SWEP.IronSightStruct = {
-	Pos = Vector(-2.805, -5, 1.35),
-	Ang = Angle(-0.3, 0, 0),
+	Pos = Vector(-3.32, -1, 0.61),
+	Ang = Angle(0, 0, 0),
 	Magnification = 1.1,
 }
 
@@ -158,8 +154,8 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0.33, -2, 1.5)
-SWEP.ActiveAng = Angle(0, 0, -3)
+SWEP.ActivePos = Vector(0, 0, 1)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(5, -2, -2)
 SWEP.CustomizeAng = Angle(15, 25, 0)
@@ -195,7 +191,7 @@ SWEP.AttachmentElements = {
 	},
 	["uc_lynx_barrel_sd"] = {
 		VMBodygroups = {
-			{ind = 2, bg = 1}
+			{ind = 6, bg = 1}
 		},
 	},
 	["uc_lynx_mag_50"] = {
@@ -343,7 +339,6 @@ SWEP.Attachments = {
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 	local SLOT = wep.Attachments[7].Installed
-	local SLOT2 = wep.Attachments[2].Installed
 	if SLOT == "uc_lynx_mag_50" then ---xmag---
 		if anim == "reload_empty" then
 			return "reload_empty_100"
@@ -359,6 +354,13 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 	end
 end
 
+SWEP.Hook_SelectFixAnim = function(wep, anim)
+	local SLOT = wep.Attachments[7].Installed
+	if SLOT == "uc_lynx_mag_50" then
+		return "fix_drum"
+	end
+end
+
 SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 SWEP.ReloadInSights = true
@@ -370,33 +372,48 @@ SWEP.MeleeAttackTime = 0.2
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
+local mech = {path .. "mech-01.wav", path .. "mech-02.wav", path .. "mech-03.wav", path .. "mech-04.wav", path .. "mech-05.wav", path .. "mech-06.wav" }
 
 SWEP.Animations = {
 	["idle"] = {
 		Source = "idle",
-		Time = 0,
+		Time = 1,
+	},
+	["idle_jammed"] = {
+		Source = "idle_jammed",
+		Time = 1,
 	},
 	["fix"] = {
 		Source = "fix",
-		Time = 1.6,
+		Time = 2.0,
 		SoundTable = {
-			{s = "Weapon_FML_Lynx.Bolt1",			t = 31/60 },
-			{s = "Weapon_FML_Lynx.Bolt2",			t = 48/60 },
-			{s = "Weapon_FML_Lynx.Foley2",			t = 66/60 },
+			{s = common .. "raise.ogg",					t = 0 },
+			{s = path .. "mk18_boltback.wav",			t = 0.8 },
+			{s = path .. "boltdrop.ogg",				t = 1.1 },
+			{s = path .. "uni_weapon_iron_out.wav",		t = 1.3 },
+			{s = common .. "shoulder.ogg",				t = 1.9 },
+		},
+	},
+	["fix_drum"] = {
+		Source = "fix_drum",
+		Time = 2.4,
+		SoundTable = {
+			{s = path .. "mk18_boltback.wav",			t = 1.0 },
+			{s = path .. "boltdrop.ogg",				t = 1.35 },
 		},
 	},
 	["draw"] = {
-		Source = "draw",
-		Time = 1,
+		Source = "idle",
+		Time = 0.3,
 		SoundTable = ArcCW.UC.DrawSounds
 	},
 	["holster"] = {
 		Source = "holster",
-		Time = 1,
+		Time = 0.3,
 		SoundTable = ArcCW.UC.HolsterSounds
 	},
 	["ready"] = {
-		Source = "fix",
+		Source = "ready",
 		Time = 1.6,
 		ProcDraw = true,
 		LHIK = true,
@@ -412,54 +429,50 @@ SWEP.Animations = {
 		},
 	},
 	["fire"] = {
-		Source = "fire",
+		Source = {"fire1", "fire2", "fire3"},
 		ShellEjectAt = 0,
 		SoundTable = {
-			{ s = {path .. "mech-01.wav",
-				path .. "mech-02.wav",
-				path .. "mech-03.wav",
-				path .. "mech-04.wav",
-				path .. "mech-05.wav",
-				path .. "mech-06.wav"
-			}, t = 0 }},
+			{ s = mech, t = 0 }
+		},
+	},
+	["fire_jammed"] = {
+		Source = "firejam",
+		SoundTable = {
+			{ s = mech, t = 0 }
+		},
 	},
 	["fire_empty"] = {
 		Source = "fire_empty",
 		ShellEjectAt = 0,
 		SoundTable = {
-			{ s = {path .. "mech-last-01.wav",
-				path .. "mech-last-02.wav",
-				path .. "mech-last-03.wav",
-				path .. "mech-last-04.wav",
-				path .. "mech-last-05.wav",
-				path .. "mech-last-06.wav"
-			}, t = 0 }},
+			{ s = mech, t = 0 }
+		},
 	},
 	["reload"] = {
 		Source = "reload",
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-		Time = 2.5,
-		MinProgress = 1.6,
+		Time = 2.2,
+		MinProgress = 1.4,
 		LHIK = true,
 		LHIKIn = 0.2,
 		LHIKOut = 0.75,
 		LHIKEaseOut = 0.3,
 		SoundTable = {
 			{s = rottle,							t = 0.0 },
-			{s = ratel,								t = 0.15 },
-			{s = path .. "magout.ogg",				t = 0.35 },
-			{s = common .. "magpouch.ogg",			t = 0.7 },
-			{s = path .. "magin.ogg", 				t = 1.1 },
-			{s = ratel,								t = 1.5 },
-			{s = rottle,							t = 1.6 },
-			{s = path .. "uni_weapon_iron_out.wav",	t = 1.7 },
-			{s = common .. "grab.ogg",				t = 1.9 },
-			{s = common .. "shoulder.ogg",			t = 2.0 },
+			{s = ratel,								t = 0.05 },
+			{s = path .. "magout.ogg",				t = 0.2 },
+			{s = common .. "magpouch.ogg",			t = 0.6 },
+			{s = path .. "magin.ogg", 				t = 0.9 },
+			{s = ratel,								t = 1.3 },
+			{s = rottle,							t = 1.5 },
+			{s = path .. "uni_weapon_iron_out.wav",	t = 1.6 },
+			{s = common .. "grab.ogg",				t = 1.8 },
+			{s = common .. "shoulder.ogg",			t = 1.9 },
 		},
 	},
 	["reload_empty"] = {
 		Source = "reload_empty",
-		Time = 3,
+		Time = 3.3,
 		MinProgress = 2.2,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
@@ -468,22 +481,22 @@ SWEP.Animations = {
 		LHIKEaseOut = 0.3,
 		SoundTable = {
 			{s = rottle,							t = 0.0 },
-			{s = ratel,								t = 0.15 },
-			{s = path .. "magout.ogg",				t = 0.35 },
+			{s = ratel,								t = 0.05 },
+			{s = path .. "magout.ogg",				t = 0.2 },
 			{s = common .. "magpouch.ogg",			t = 0.7 },
 			{s = path .. "magin.ogg", 				t = 1.1 },
 			{s = ratel,								t = 1.5 },
 			{s = rottle,							t = 1.6 },
 			{s = path .. "uni_weapon_iron_out.wav",	t = 1.7 },
-			{s = path .. "boltdrop.ogg",			t = 2.0 },
-			{s = common .. "grab.ogg",				t = 2.2 },
-			{s = common .. "rattle_b2i_rifle.ogg",	t = 2.3 },
-			{s = common .. "shoulder.ogg",			t = 2.4 },
+			{s = path .. "boltdrop.ogg",			t = 2.2 },
+			{s = common .. "grab.ogg",				t = 2.4 },
+			{s = common .. "rattle_b2i_rifle.ogg",	t = 2.5 },
+			{s = common .. "shoulder.ogg",			t = 2.6 },
 		},
 	},
 		["reload_100"] = {
-			Source = "reload_100",
-			Time = 2.9 * 1.2,
+			Source = "reloaddrum",
+			Time = 2.9,
 			TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 			LHIK = true,
 			LHIKIn = 0.2,
@@ -499,8 +512,8 @@ SWEP.Animations = {
 			},
 		},
 		["reload_empty_100"] = {
-			Source = "reload_empty_100",
-			Time = 3.5 * 1.2,
+			Source = "reloaddrum_empty",
+			Time = 3.5,
 			TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 			LHIK = true,
 			LHIKIn = 0.2,
@@ -518,7 +531,7 @@ SWEP.Animations = {
 			},
 		},
 	["reload_40"] = {
-		Source = "reload_60",
+		Source = "reload40",
 		Time = 2.5,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
@@ -526,14 +539,10 @@ SWEP.Animations = {
 		LHIKOut = 0.6,
 		LHIKEaseOut = 0.3,
 		SoundTable = {
-			{s = "Weapon_FML_Lynx.Foley1", 			t = 0.0 },
-			{s = "Weapon_FML_Lynx.Out",				t = 0.2 },
-			{s = "Weapon_FML_Lynx.In", 				t = 1.1 },
-			{s = "Weapon_FML_Lynx.Foley2",			t = 1.7 },
 		},
 	},
 	["reload_empty_40"] = {
-		Source = "reload_empty_60",
+		Source = "reload40_empty",
 		Time = 3,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
@@ -541,12 +550,6 @@ SWEP.Animations = {
 		LHIKOut = 0.6,
 		LHIKEaseOut = 0.3,
 		SoundTable = {
-			{s = "Weapon_FML_Lynx.Foley1",			t = 0.0 },
-			{s = "Weapon_FML_Lynx.Out",				t = 0.2 },
-			{s = "Weapon_FML_Lynx.In",				t = 1.1 },
-			{s = "Weapon_FML_Lynx.Foley2",			t = 1.7 },
-			{s = "Weapon_FML_Lynx.Bolt2",			t = 2.0 },
-			{s = "Weapon_FML_Lynx.Foley3",			t = 2.1 },
 		},
 	},
 }
