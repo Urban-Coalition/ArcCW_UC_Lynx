@@ -276,8 +276,8 @@ SWEP.Attachments = {
 		Slot = "tac",
 		Bone = "wpn",
 		Offset = {
-			vpos = Vector(-1, 0, 12),
-			vang = Angle(90, 0, -180),
+			vpos = Vector(-0.98, 5.4, 1.36),
+			vang = Angle(0, -90, -90),
 		},
 		InstalledEles = {"grip"},
 	},
