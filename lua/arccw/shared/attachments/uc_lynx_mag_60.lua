@@ -1,5 +1,5 @@
-att.PrintName = "50-Round Drum"
-att.Icon = Material("entities/att/acwatt_uc_lynx_mag_50.png", "smooth mips")
+att.PrintName = "60-Round Drum"
+att.Icon = Material("entities/att/acwatt_uc_lynx_mag_60.png", "smooth mips")
 att.Description = "Drum magazine. Bulky construction and high ammo capacity substantially increases weight, making the weapon difficult to handle. Prone to feeding failures."
 att.Desc_Pros = {}
 att.Desc_Cons = {
@@ -8,10 +8,10 @@ att.Desc_Cons = {
 att.Desc_Neutrals = {}
 att.AutoStats = true
 att.Slot = "uc_lynx_mag"
-att.SortOrder = 50
+att.SortOrder = 60
 att.HideIfBlocked = true
 
-att.Override_ClipSize = 50
+att.Override_ClipSize = 60
 
 att.Mult_SightTime = 1.25
 att.Mult_ReloadTime = 1.25

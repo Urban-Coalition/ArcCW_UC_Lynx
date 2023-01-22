@@ -1,4 +1,4 @@
-att.PrintName = "Q Half Nelson Suppressor"
+att.PrintName = "Q Full Nelson Suppressor"
 att.Icon = Material("entities/att/acwatt_uc_muzzle_supp_qhalfnelson.png", "mips smooth")
 att.Description = "Traps propellant gas from the muzzle, reducing visual and audible report.\nLow-profile and enhances ballistics, but slightly cumbersome.\n\nWould fit quite snuggly in the handguard of a Honey Badger!"
 att.Desc_Neutrals = {"uc.exclusive.rifle", "uc.supptail"}
@@ -9,7 +9,7 @@ att.Slot = {"muzzle"}
 att.SortOrder = 150
 
 att.Model = "models/uc/att/supp_qhalfnelson.mdl"
-att.ModelBodygroups = "0"
+att.ModelBodygroups = "1"
 att.ModelOffset = Vector(0, 0, 0)
 att.OffsetAng = Angle(0, 0, 0)
 
