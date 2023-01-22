@@ -1,6 +1,6 @@
 att.PrintName = "40-Round Mag"
 att.Icon = Material("entities/att/thisnuts.png", "smooth mips")
-att.Description = "40-round magazine. A bit heavier."
+att.Description = "40-round box magazine. Heavier than the standard 30-rounder, but reliable."
 att.Desc_Pros = {}
 att.Desc_Cons = {
     "uc.jam"

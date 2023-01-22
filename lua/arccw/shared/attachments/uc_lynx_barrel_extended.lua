@@ -1,6 +1,6 @@
 att.PrintName = "16\" Extended Barrel"
 att.Icon = Material("entities/acwatt_uc_lynx_barrel_extended.png")
-att.Description = "Longer barrel.. for longer range combat!"
+att.Description = "Carbine length barrel with an extended M-LOK handguard. Significantly enhances ballistic performance and recoil control at the cost of handling."
 
 att.AutoStats = true
 att.Slot = "uc_lynx_barrel"

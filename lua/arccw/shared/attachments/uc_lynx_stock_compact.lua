@@ -1,7 +1,7 @@
 att.PrintName = "Compact Stock"
 
 att.Icon = Material("entities/att/acwatt_ud_m16_stock_carbine.png", "smooth mips")
-att.Description = "Fold the stock to allow for use in close-quarters combat."
+att.Description = "Collapse the stock, enhancing the weapon's utility in close-quarters combat."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
