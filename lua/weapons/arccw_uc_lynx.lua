@@ -397,8 +397,8 @@ SWEP.Animations = {
 		Time = 2.0,
 		SoundTable = {
 			{s = common .. "raise.ogg",					t = 0 },
-			{s = path .. "chback.ogg",			t = 0.8 },
-			{s = path .. "chforward.ogg",				t = 1.1 },
+			{s = path .. "chback.ogg",					t = 0.8 },
+			{s = path .. "chforward.ogg",				t = 1.0 },
 			{s = common .. "shoulder.ogg",				t = 1.9 },
 		},
 		LHIK = true,
@@ -411,7 +411,7 @@ SWEP.Animations = {
 		Source = "fix_drum",
 		Time = 2.4,
 		SoundTable = {
-			{s = path .. "chback.ogg",			t = 1.0 },
+			{s = path .. "chback.ogg",					t = 0.9 },
 			{s = path .. "chforward.ogg",				t = 1.35 },
 		},
 		LHIK = true,
@@ -554,7 +554,7 @@ SWEP.Animations = {
 				{s = path .. "drum_grab.ogg",			t = 0.3 },
 				{s = path .. "drum_magrel.ogg",			t = 0.5 },
 				{s = path .. "drum_out.ogg",			t = 0.6 },
-				{s = common .. "magpouch.ogg",			t = 1.1 },
+				{s = common .. "magpouch.ogg",			t = 0.9 },
 				{s = path .. "drum_struggle.ogg", 		t = 1.2 },
 				{s = ratel,								t = 1.5 },
 				{s = rottle,							t = 1.6 },
