@@ -178,6 +178,7 @@ SWEP.CrouchAng = Angle(0, 0, -15)
 SWEP.BarrelLength = 24
 
 SWEP.DefaultBodygroups = "000000000000000"
+SWEP.DefaultFlags = {"cal_subsonic"}
 
 SWEP.AttachmentElements = {
 	["grip"] = {
@@ -295,7 +296,7 @@ SWEP.Attachments = {
 	{
 		PrintName = "Powder Load",
 		Slot = "uc_powder",
-		DefaultAttName = "Standard Load"
+		DefaultAttName = "Standard Load",
 	},
 	{
 		PrintName = "Training Package",
@@ -422,8 +423,9 @@ SWEP.Animations = {
 	},
 	["draw"] = {
 		Source = "idle",
-		Time = 0.3,
-		SoundTable = ArcCW.UC.DrawSounds
+		Time = 0.6,
+		SoundTable = ArcCW.UC.DrawSounds,
+		ProcDraw = true,
 	},
 	["holster"] = {
 		Source = "holster",
@@ -433,11 +435,6 @@ SWEP.Animations = {
 	["ready"] = {
 		Source = "ready",
 		Time = 1.6,
-		ProcDraw = true,
-		LHIK = true,
-		LHIKIn = 0,
-		LHIKOut = 0.75,
-		LHIKEaseOut = 0.3,
 		SoundTable = {
 			{s = common .. "raise.ogg",					t = 0 },
 			{s = common .. "rattle.ogg",				t = 0.2 },
