@@ -1,8 +1,8 @@
 VertexLitGeneric
 {
-	$basetexture					"models/weapons/uc_badger/t_1p_hbrail_d"
-	$bumpmap						"models/weapons/uc_badger/t_1p_hbrail_n"
-	$phongexponenttexture			"models/weapons/uc_badger/t_1p_hbrail_m"
+	$basetexture					"uc/badger/t_1p_hbrail_d"
+	$bumpmap						"uc/badger/t_1p_hbrail_n"
+	$phongexponenttexture			"uc/badger/t_1p_hbrail_m"
 	
 	$phong							1
 	$phongboost						1
