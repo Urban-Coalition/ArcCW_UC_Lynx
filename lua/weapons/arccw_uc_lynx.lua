@@ -126,12 +126,12 @@ SWEP.DistantShootSoundOutdoors = {
 	path .. "fire-dist-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
-	path .. "fire-dist-int-01.ogg",
-	path .. "fire-dist-int-02.ogg",
-	path .. "fire-dist-int-03.ogg",
-	path .. "fire-dist-int-04.ogg",
-	path .. "fire-dist-int-05.ogg",
-	path .. "fire-dist-int-06.ogg"
+	common .. "fire-dist-int-01.ogg",
+	common .. "fire-dist-int-02.ogg",
+	common .. "fire-dist-int-03.ogg",
+	common .. "fire-dist-int-04.ogg",
+	common .. "fire-dist-int-05.ogg",
+	common .. "fire-dist-int-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsVolume = 1
 SWEP.DistantShootSoundIndoorsVolume = 1
