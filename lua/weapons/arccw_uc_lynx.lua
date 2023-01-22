@@ -180,11 +180,6 @@ SWEP.BarrelLength = 24
 SWEP.DefaultBodygroups = "000000000000000"
 
 SWEP.AttachmentElements = {
-	["noch"] = {
-		VMBodygroups = {
-			{ind = 2, bg = 2}
-		},
-	},
 	["grip"] = {
 		VMBodygroups = {
 			{ind = 5, bg = 1}
@@ -193,23 +188,22 @@ SWEP.AttachmentElements = {
 	["uc_lynx_barrel_extended"] = {
 		VMBodygroups = {
 			{ind = 1, bg = 1},
-			{ind = 2, bg = 1},
 			{ind = 3, bg = 1},
 		},
 	},
-	["uc_lynx_barrel_sd"] = {
+	["uc_lynx_barrel_sbrhg"] = {
 		VMBodygroups = {
-			{ind = 6, bg = 1}
+			{ind = 3, bg = 1},
 		},
 	},
 	["uc_lynx_mag_50"] = {
 		VMBodygroups = {
-			{ind = 3, bg = 1},
+			{ind = 4, bg = 2},
 		},
 	},
 	["uc_lynx_mag_40"] = {
 		VMBodygroups = {
-			{ind = 3, bg = 2},
+			{ind = 4, bg = 1},
 		},
 	},
 	["uc_lynx_stock_compact"] = {
@@ -237,7 +231,6 @@ SWEP.Attachments = {
 			vang = Angle(0, -90, 0),
 		},
 		CorrectiveAng = Angle( 0, 180, 0 ),
-		InstalledEles = {"noch"},
 	},
 	{
 		PrintName = "Barrel",
@@ -348,7 +341,7 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 		elseif anim == "reload" then
 			return "reload_100"
 		end
-	elseif SLOT == "uc_lynx_mag_36" then ---rmag---
+	elseif SLOT == "uc_lynx_mag_40" then ---rmag---
 		if anim == "reload_empty" then
 			return "reload_empty_40"
 		elseif anim == "reload" then
@@ -364,13 +357,25 @@ SWEP.Hook_SelectFixAnim = function(wep, anim)
 	end
 end
 
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+	local sl_optics = wep.Attachments[1].Installed
+	local sl_barrel = wep.Attachments[2].Installed
+	local vm = data.vm
+	if IsValid(vm) then
+		if sl_optics then
+			vm:SetBodygroup( 2, 2 )
+		elseif sl_barrel == "uc_lynx_barrel_extended" then
+			vm:SetBodygroup( 2, 1 )
+		else
+			vm:SetBodygroup( 2, 0 )
+		end
+	end
+end
+
 SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 SWEP.ReloadInSights = true
 SWEP.LockSightsInReload = false
-
-SWEP.MeleeTime = 0.7
-SWEP.MeleeAttackTime = 0.2
 
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
@@ -396,6 +401,11 @@ SWEP.Animations = {
 			{s = path .. "uni_weapon_iron_out.wav",		t = 1.3 },
 			{s = common .. "shoulder.ogg",				t = 1.9 },
 		},
+		LHIK = true,
+		LHIKEaseIn = 0.3,
+		LHIKIn = 0.8,
+		LHIKOut = 0.7,
+		LHIKEaseOut = 0.3,
 	},
 	["fix_drum"] = {
 		Source = "fix_drum",
@@ -404,6 +414,11 @@ SWEP.Animations = {
 			{s = path .. "mk18_boltback.wav",			t = 1.0 },
 			{s = path .. "boltdrop.ogg",				t = 1.35 },
 		},
+		LHIK = true,
+		LHIKEaseIn = 0.3,
+		LHIKIn = 1.0,
+		LHIKOut = 0.7,
+		LHIKEaseOut = 0.3,
 	},
 	["draw"] = {
 		Source = "idle",
@@ -446,6 +461,13 @@ SWEP.Animations = {
 	},
 	["fire_empty"] = {
 		Source = "fire_empty",
+		ShellEjectAt = 0,
+		SoundTable = {
+			{ s = mech, t = 0 }
+		},
+	},
+	["fire_sights"] = {
+		Source = "fire_sights",
 		ShellEjectAt = 0,
 		SoundTable = {
 			{ s = mech, t = 0 }
