@@ -7,7 +7,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "Lynx CQ300"
 SWEP.TrueName = "Honey Badger"
 SWEP.Trivia_Class = "Personal Defense Weapon"
-SWEP.Trivia_Desc = "Versatile PDW that is often configured integrally suppressed. Chambered in .300 AAC Blackout, it is designed to have the ease of use and similarity of an AR-15, but the portability of an MP5. This one can be modified to accept various calibers of ammunition, from .45 ACP to .50 Beuwolf."
+SWEP.Trivia_Desc = "Versatile PDW that is often configured integrally suppressed.\nChambered in .300 AAC Blackout, it is designed to have the ease of use and similarity of an AR-15, but the portability of an MP5."
 SWEP.Trivia_Manufacturer = "Q, LLC"
 SWEP.Trivia_Calibre = ".300 AAC Blackout"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
@@ -40,8 +40,8 @@ SWEP.Range = 220
 SWEP.Penetration = 12
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 720
-SWEP.PhysBulletMuzzleVelocity = 720
+SWEP.MuzzleVelocity = 300
+SWEP.PhysBulletMuzzleVelocity = 300
 -- IN M/S
 
 SWEP.ChamberSize = 1
@@ -78,9 +78,10 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = {"weapon_ar2","weapon_smg1"}
 SWEP.NPCWeight = 200
 
-SWEP.AccuracyMOA = 6
-SWEP.HipDispersion = 550
-SWEP.MoveDispersion = 250
+SWEP.AccuracyMOA = 5
+SWEP.HipDispersion = 500
+SWEP.MoveDispersion = 200
+SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "stanag"
@@ -259,6 +260,7 @@ SWEP.Attachments = {
 			vang = Angle(0, -90, 0),
 		},
 		InstalledEles = {"muzzle"},
+		Installed = "uc_muzzle_supp_qhalfnelson"
 	},
 	{
 		PrintName = "Underbarrel",
@@ -494,7 +496,7 @@ SWEP.Animations = {
 			{s = ratel,								t = 1.3 },
 			{s = rottle,							t = 1.5 },
 			{s = path .. "grab.ogg",				t = 1.6 },
-			{s = path .. "shoulder.ogg",			t = 1.7 },
+			{s = path .. "shoulder.ogg",			t = 1.9 },
 		},
 	},
 	["reload_empty"] = {
@@ -577,7 +579,7 @@ SWEP.Animations = {
 		},
 	["reload_40"] = {
 		Source = "reload40",
-		Time = 2.5,
+		Time = 2.6,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
 		LHIKEaseIn = 0.1,
@@ -585,11 +587,21 @@ SWEP.Animations = {
 		LHIKOut = 0.7,
 		LHIKEaseOut = 0.2,
 		SoundTable = {
+			{s = rottle,							t = 0.0 },
+			{s = ratel,								t = 0.05 },
+			{s = path .. "magout.ogg",				t = 0.3 },
+			{s = common .. "magpouch.ogg",			t = 0.6 },
+			{s = path .. "struggle.ogg", 			t = 0.9 },
+			{s = path .. "magin.ogg", 				t = 1.4 },
+			{s = ratel,								t = 1.6 },
+			{s = rottle,							t = 1.7 },
+			{s = path .. "grab.ogg",				t = 2.0 },
+			{s = path .. "shoulder.ogg",			t = 2.2 },
 		},
 	},
 	["reload_empty_40"] = {
 		Source = "reload40_empty",
-		Time = 3,
+		Time = 3.7,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
 		LHIKEaseIn = 0.1,
@@ -597,6 +609,17 @@ SWEP.Animations = {
 		LHIKOut = 0.6,
 		LHIKEaseOut = 0.2,
 		SoundTable = {
+			{s = rottle,							t = 0.0 },
+			{s = ratel,								t = 0.05},
+			{s = path .. "magout.ogg",				t = 0.2 },
+			{s = common .. "magpouch.ogg",			t = 0.7 },
+			{s = path .. "struggle.ogg", 			t = 1.3 },
+			{s = path .. "magin.ogg", 				t = 1.5 },
+			{s = ratel,								t = 1.8 },
+			{s = rottle,							t = 2.0 },
+			{s = path .. "chforward.ogg",			t = 2.4 },
+			{s = path .. "grab.ogg",				t = 3.0, v = 0.5 },
+			{s = path .. "shoulder.ogg",			t = 3.2, v = 0.5 },
 		},
 	},
 }
