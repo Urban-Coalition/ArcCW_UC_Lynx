@@ -1,6 +1,6 @@
 att.PrintName = "No Stock"
 
-att.Icon = Material("entities/att/acwatt_ud_m16_stock_buffer.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_uc_lynx_stock_none.png", "smooth mips")
 att.Description = "Completely removed. As compact as it gets!"
 att.Desc_Pros = {
 }
@@ -11,7 +11,7 @@ att.Desc_Neutrals = {
 att.Slot = "uc_lynx_stock"
 
 att.AutoStats = true
-att.SortOrder = -100
+att.SortOrder = 64
 att.Free = true
 
 att.Mult_SpeedMult = 1.05

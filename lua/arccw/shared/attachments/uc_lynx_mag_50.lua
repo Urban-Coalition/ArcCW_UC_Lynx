@@ -1,5 +1,5 @@
 att.PrintName = "50-Round Drum"
-att.Icon = Material("entities/att/thisnuts.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_uc_lynx_mag_50.png", "smooth mips")
 att.Description = "Drum magazine. Bulky construction and high ammo capacity substantially increases weight, making the weapon difficult to handle. Prone to feeding failures."
 att.Desc_Pros = {}
 att.Desc_Cons = {
