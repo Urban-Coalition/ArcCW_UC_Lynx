@@ -1,7 +1,7 @@
 VertexLitGeneric
 {
-	$basetexture					"models/weapons/uc_badger/asierra12_xxmag"
-	$bumpmap						"models/weapons/uc_badger/asierra12_xxmag_n"
+	$basetexture					"uc/badger/asierra12_xxmag"
+	$bumpmap						"uc/badger/asierra12_xxmag_n"
 	$phongexponent					30
 	
 	$phong							1

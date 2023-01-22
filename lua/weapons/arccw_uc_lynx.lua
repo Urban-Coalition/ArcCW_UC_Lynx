@@ -249,7 +249,7 @@ SWEP.Attachments = {
 		Slot = "muzzle",
 		Bone = "wpn",
 		Offset = {
-			vpos = Vector(0, 10.8, 1.38),
+			vpos = Vector(0, 10.9, 1.38),
 			vang = Angle(0, -90, 0),
 		},
 		InstalledEles = {"muzzle"},
@@ -316,14 +316,11 @@ SWEP.Attachments = {
 		PrintName = "Charm",
 		Slot = "charm",
 		FreeSlot = true,
-		Bone = "m16_parent",
+		Bone = "wpn",
 		Offset = {
-			vpos = Vector(-0.8, 8, -4.2),
-			vang = Angle(90, -90, 90),
-			wpos = Vector(6.099, 1.1, -3.301),
-			wang = Angle(171.817, 180-1.17, 0),
+			vpos = Vector(0.5, 2.4, 0.15),
+			vang = Angle(0, -90, 0),
 		},
-		CorrectiveAng = Angle(180, 0, 0),
 	},
 	{
 		PrintName = "M203 slot",
@@ -339,7 +336,7 @@ SWEP.Attachments = {
 }
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
-	local SLOT = wep.Attachments[7].Installed
+	local SLOT = wep.Attachments[8].Installed
 	if SLOT == "uc_lynx_mag_50" then ---xmag---
 		if anim == "reload_empty" then
 			return "reload_empty_100"
