@@ -97,40 +97,41 @@ SWEP.ShootVol = 115
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0.04
 
-local path = ")^weapons/arccw_uc_lynx/"
+local path = ")^weapons/arccw_uc_badger/"
 local path1 = ")^weapons/arccw_ud/uzi/"
 local common = ")^/arccw_uc/common/"
+
 SWEP.ShootSound = {
-	path .. "fire-01.wav",
-	path .. "fire-02.wav",
-	path .. "fire-03.wav",
-	path .. "fire-04.wav",
-	path .. "fire-05.wav",
-	path .. "fire-06.wav"
+	path .. "fire-01.ogg",
+	path .. "fire-02.ogg",
+	path .. "fire-03.ogg",
+	path .. "fire-04.ogg",
+	path .. "fire-05.ogg",
+	path .. "fire-06.ogg"
 }
 SWEP.ShootSoundSilenced = {
-	path .. "fire-sup-01.wav",
-	path .. "fire-sup-02.wav",
-	path .. "fire-sup-03.wav",
-	path .. "fire-sup-04.wav",
-	path .. "fire-sup-05.wav",
-	path .. "fire-sup-06.wav"
+	path .. "fire-sup-01.ogg",
+	path .. "fire-sup-02.ogg",
+	path .. "fire-sup-03.ogg",
+	path .. "fire-sup-04.ogg",
+	path .. "fire-sup-05.ogg",
+	path .. "fire-sup-06.ogg"
 }
 SWEP.DistantShootSoundOutdoors = {
-	path .. "fire-dist-01.wav",
-	path .. "fire-dist-02.wav",
-	path .. "fire-dist-03.wav",
-	path .. "fire-dist-04.wav",
-	path .. "fire-dist-05.wav",
-	path .. "fire-dist-06.wav"
+	path .. "fire-dist-01.ogg",
+	path .. "fire-dist-02.ogg",
+	path .. "fire-dist-03.ogg",
+	path .. "fire-dist-04.ogg",
+	path .. "fire-dist-05.ogg",
+	path .. "fire-dist-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
-	path .. "fire-dist-int-01.wav",
-	path .. "fire-dist-int-02.wav",
-	path .. "fire-dist-int-03.wav",
-	path .. "fire-dist-int-04.wav",
-	path .. "fire-dist-int-05.wav",
-	path .. "fire-dist-int-06.wav"
+	path .. "fire-dist-int-01.ogg",
+	path .. "fire-dist-int-02.ogg",
+	path .. "fire-dist-int-03.ogg",
+	path .. "fire-dist-int-04.ogg",
+	path .. "fire-dist-int-05.ogg",
+	path .. "fire-dist-int-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsVolume = 1
 SWEP.DistantShootSoundIndoorsVolume = 1
@@ -380,7 +381,7 @@ SWEP.LockSightsInReload = false
 local common = ")^/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
-local mech = {path .. "mech-01.wav", path .. "mech-02.wav", path .. "mech-03.wav", path .. "mech-04.wav", path .. "mech-05.wav", path .. "mech-06.wav" }
+local mech = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg" }
 
 SWEP.Animations = {
 	["idle"] = {
@@ -396,9 +397,8 @@ SWEP.Animations = {
 		Time = 2.0,
 		SoundTable = {
 			{s = common .. "raise.ogg",					t = 0 },
-			{s = path .. "mk18_boltback.wav",			t = 0.8 },
-			{s = path .. "boltdrop.ogg",				t = 1.1 },
-			{s = path .. "uni_weapon_iron_out.wav",		t = 1.3 },
+			{s = path .. "chback.ogg",			t = 0.8 },
+			{s = path .. "chforward.ogg",				t = 1.1 },
 			{s = common .. "shoulder.ogg",				t = 1.9 },
 		},
 		LHIK = true,
@@ -411,8 +411,8 @@ SWEP.Animations = {
 		Source = "fix_drum",
 		Time = 2.4,
 		SoundTable = {
-			{s = path .. "mk18_boltback.wav",			t = 1.0 },
-			{s = path .. "boltdrop.ogg",				t = 1.35 },
+			{s = path .. "chback.ogg",			t = 1.0 },
+			{s = path .. "chforward.ogg",				t = 1.35 },
 		},
 		LHIK = true,
 		LHIKEaseIn = 0.3,
@@ -441,16 +441,15 @@ SWEP.Animations = {
 		SoundTable = {
 			{s = common .. "raise.ogg",					t = 0 },
 			{s = common .. "rattle.ogg",				t = 0.2 },
-			{s = path .. "mk18_boltback.wav",			t = 0.4 },
-			{s = path .. "boltdrop.ogg",				t = 0.7 },
-			{s = path .. "uni_weapon_iron_out.wav",		t = 1.2 },
+			{s = path .. "chback.ogg",			t = 0.4 },
+			{s = path .. "chforward.ogg",				t = 0.7 },
 		},
 	},
 	["fire"] = {
 		Source = {"fire1", "fire2", "fire3"},
 		ShellEjectAt = 0,
 		SoundTable = {
-			{ s = mech, t = 0 }
+			{ s = mech, t = 0, v = 0.25 }
 		},
 	},
 	["fire_jammed"] = {
@@ -488,12 +487,12 @@ SWEP.Animations = {
 			{s = ratel,								t = 0.05 },
 			{s = path .. "magout.ogg",				t = 0.2 },
 			{s = common .. "magpouch.ogg",			t = 0.6 },
-			{s = path .. "magin.ogg", 				t = 0.9 },
+			{s = path .. "struggle.ogg", 			t = 0.7 },
+			{s = path .. "magin.ogg", 				t = 1.1 },
 			{s = ratel,								t = 1.3 },
 			{s = rottle,							t = 1.5 },
-			{s = path .. "uni_weapon_iron_out.wav",	t = 1.6 },
-			{s = common .. "grab.ogg",				t = 1.8 },
-			{s = common .. "shoulder.ogg",			t = 1.9 },
+			{s = path .. "grab.ogg",				t = 1.6 },
+			{s = path .. "shoulder.ogg",			t = 1.7 },
 		},
 	},
 	["reload_empty"] = {
@@ -508,17 +507,16 @@ SWEP.Animations = {
 		LHIKEaseOut = 0.2,
 		SoundTable = {
 			{s = rottle,							t = 0.0 },
-			{s = ratel,								t = 0.05 },
-			{s = path .. "magout.ogg",				t = 0.2 },
+			{s = ratel,								t = 0.05},
+			{s = path .. "magout.ogg",				t = 0.1 },
 			{s = common .. "magpouch.ogg",			t = 0.7 },
-			{s = path .. "magin.ogg", 				t = 1.1 },
+			{s = path .. "struggle.ogg", 			t = 1.1 },
+			{s = path .. "magin.ogg", 				t = 1.4 },
 			{s = ratel,								t = 1.5 },
 			{s = rottle,							t = 1.6 },
-			{s = path .. "uni_weapon_iron_out.wav",	t = 1.7 },
-			{s = path .. "boltdrop.ogg",			t = 2.2 },
-			{s = common .. "grab.ogg",				t = 2.4 },
-			{s = common .. "rattle_b2i_rifle.ogg",	t = 2.5 },
-			{s = common .. "shoulder.ogg",			t = 2.6 },
+			{s = path .. "chforward.ogg",			t = 2.0 },
+			{s = path .. "grab.ogg",				t = 2.6 },
+			{s = path .. "shoulder.ogg",			t = 2.8 },
 		},
 	},
 		["reload_100"] = {
