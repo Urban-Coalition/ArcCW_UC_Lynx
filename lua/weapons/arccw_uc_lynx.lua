@@ -22,8 +22,8 @@ end
 
 SWEP.UseHands = true
 
-SWEP.ViewModel		=	"models/weapons/uc/badger.mdl"
-SWEP.WorldModel		=	"models/weapons/uc/badger.mdl"
+SWEP.ViewModel		=	"models/uc/badger.mdl"
+SWEP.WorldModel		=	"models/uc/badger.mdl"
 SWEP.ViewModelFOV	=	80
 
 SWEP.MirrorVMWM = true
@@ -229,7 +229,7 @@ SWEP.Attachments = {
 		Slot = {"optic_sniper", "optic", "optic_lp"},
 		Bone = "wpn",
 		Offset = {
-			vpos = Vector(0, 0.8, 2.5),
+			vpos = Vector(0, 1.2, 2.55),
 			vang = Angle(0, -90, 0),
 		},
 		CorrectiveAng = Angle( 0, 180, 0 ),
