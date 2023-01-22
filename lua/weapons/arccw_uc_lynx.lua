@@ -171,7 +171,7 @@ SWEP.ShootSpeedMult = 0.95
 SWEP.SightTime = 0.3
 
 SWEP.IronSightStruct = {
-	Pos = Vector(-3.32, -1, 0.61),
+	Pos = Vector(-3.32, 1, 0.61),
 	Ang = Angle(0, 0, 0),
 	Magnification = 1.1,
 }
@@ -196,8 +196,6 @@ SWEP.SprintAng = Angle(-8.5, 15, -10)
 
 SWEP.CrouchPos = Vector(-3.5, 0, -1)
 SWEP.CrouchAng = Angle(0, 0, -15)
-
-SWEP.BarrelLength = 24
 
 SWEP.DefaultBodygroups = "000000000000000"
 SWEP.DefaultFlags = {"cal_subsonic"}
@@ -246,6 +244,7 @@ SWEP.AttachmentElements = {
 	},
 }
 
+SWEP.BarrelLength = 24
 SWEP.ExtraSightDist = 2
 
 SWEP.Attachments = {
