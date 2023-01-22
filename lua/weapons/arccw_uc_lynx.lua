@@ -364,12 +364,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 	local sl_barrel = wep.Attachments[2].Installed
 	local vm = data.vm
 	if IsValid(vm) then
+		local long = (sl_barrel == "uc_lynx_barrel_extended" or sl_barrel == "uc_lynx_barrel_sbrhg")
 		if sl_optics then
-			vm:SetBodygroup( 2, 2 )
-		elseif sl_barrel == "uc_lynx_barrel_extended" or sl_barrel == "uc_lynx_barrel_sbrhg" then
-			vm:SetBodygroup( 2, 1 )
+			vm:SetBodygroup( 2, (long and 4 or 3) )
 		else
-			vm:SetBodygroup( 2, 0 )
+			vm:SetBodygroup( 2, (long and 1 or 0) )
 		end
 	end
 end
