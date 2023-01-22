@@ -1,5 +1,4 @@
 att.PrintName = "Q Half Nelson Suppressor"
-att.AbbrevName = "Q Half Nelson"
 att.Icon = Material("entities/att/acwatt_uc_muzzle_supp_qhalfnelson.png", "mips smooth")
 att.Description = "Traps propellant gas from the muzzle, reducing visual and audible report.\nLow-profile and enhances ballistics, but slightly cumbersome."
 att.Desc_Neutrals = {"uc.exclusive.rifle", "uc.supptail"}

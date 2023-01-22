@@ -191,6 +191,12 @@ SWEP.AttachmentElements = {
 		VMBodygroups = {
 			{ind = 1, bg = 1},
 		},
+		AttPosMods = {
+			[4] = {
+				vpos = Vector(0, 14.9, 1.38),
+				vang = Angle(0, -90, 0),
+			},
+		}
 	},
 	["uc_lynx_handguard_long"] = {
 		VMBodygroups = {
@@ -228,7 +234,7 @@ SWEP.Attachments = {
 		Slot = {"optic_sniper", "optic", "optic_lp"},
 		Bone = "wpn",
 		Offset = {
-			vpos = Vector(0, 1.2, 2.55),
+			vpos = Vector(0, 1.6, 2.55),
 			vang = Angle(0, -90, 0),
 		},
 		CorrectiveAng = Angle( 0, 180, 0 ),
@@ -249,7 +255,7 @@ SWEP.Attachments = {
 		Slot = "muzzle",
 		Bone = "wpn",
 		Offset = {
-			vpos = Vector(0, 10.9, 1.38),
+			vpos = Vector(0, 9.5, 1.38),
 			vang = Angle(0, -90, 0),
 		},
 		InstalledEles = {"muzzle"},
@@ -574,9 +580,10 @@ SWEP.Animations = {
 		Time = 2.5,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
+		LHIKEaseIn = 0.1,
 		LHIKIn = 0.2,
-		LHIKOut = 0.6,
-		LHIKEaseOut = 0.3,
+		LHIKOut = 0.7,
+		LHIKEaseOut = 0.2,
 		SoundTable = {
 		},
 	},
@@ -585,9 +592,10 @@ SWEP.Animations = {
 		Time = 3,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
+		LHIKEaseIn = 0.1,
 		LHIKIn = 0.2,
 		LHIKOut = 0.6,
-		LHIKEaseOut = 0.3,
+		LHIKEaseOut = 0.2,
 		SoundTable = {
 		},
 	},

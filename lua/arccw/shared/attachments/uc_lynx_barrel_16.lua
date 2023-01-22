@@ -1,10 +1,10 @@
-att.PrintName = "16\" Extended Barrel"
+att.PrintName = "14.5\" Extended Barrel"
 att.Icon = Material("entities/acwatt_uc_lynx_barrel_16.png")
 att.Description = "Carbine length barrel. Significantly enhances ballistic performance and recoil control at the cost of handling."
 
 att.AutoStats = true
 att.Slot = "uc_lynx_barrel"
-att.SortOrder = 16
+att.SortOrder = 14.5
 
 att.Mult_ShootVol = 1.1
 
