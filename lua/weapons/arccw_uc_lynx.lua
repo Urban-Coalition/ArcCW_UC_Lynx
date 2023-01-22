@@ -470,7 +470,7 @@ SWEP.Animations = {
 		},
 	},
 	["fire_empty"] = {
-		Source = "fire_empty",
+		Source = "firelast",
 		ShellEjectAt = 0,
 		SoundTable = {
 			{ s = mech, t = 0 }
