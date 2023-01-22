@@ -188,7 +188,7 @@ SWEP.AttachmentElements = {
 			{ind = 5, bg = 1}
 		},
 	},
-	["uc_lynx_barrel_16"] = {
+	["uc_lynx_barrel_14"] = {
 		VMBodygroups = {
 			{ind = 1, bg = 1},
 		},
@@ -199,7 +199,7 @@ SWEP.AttachmentElements = {
 			},
 		}
 	},
-	["uc_lynx_handguard_long"] = {
+	["uc_lynx_hg_long"] = {
 		VMBodygroups = {
 			{ind = 3, bg = 1},
 		},
@@ -379,7 +379,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 	local sl_barrel = wep.Attachments[3].Installed
 	local vm = data.vm
 	if IsValid(vm) then
-		local long = (sl_barrel == "uc_lynx_handguard_long")
+		local long = (sl_barrel == "uc_lynx_hg_long")
 		if sl_optics then
 			vm:SetBodygroup( 2, (long and 4 or 3) )
 		else
@@ -535,9 +535,10 @@ SWEP.Animations = {
 			Time = 2.9,
 			TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 			LHIK = true,
-			LHIKIn = 0.2,
-			LHIKOut = 0.75,
-			LHIKEaseOut = 0.3,
+			LHIKEaseIn = 0.2,
+			LHIKIn = 0.4,
+			LHIKOut = 0.6,
+			LHIKEaseOut = 0.2,
 			SoundTable = {
 				{s = rottle,							t = 0.0 },
 				{s = ratel,								t = 0.05},
@@ -560,8 +561,9 @@ SWEP.Animations = {
 			Time = 3.5,
 			TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 			LHIK = true,
-			LHIKIn = 0.2,
-			LHIKOut = 0.75,
+			LHIKEaseIn = 0.2,
+			LHIKIn = 0.4,
+			LHIKOut = 0.6,
 			LHIKEaseOut = 0.3,
 			SoundTable = {
 				{s = rottle,							t = 0.0 },
