@@ -18,7 +18,7 @@ att.Mult_ReloadTime = 1.25
 att.Mult_Sway = 2
 
 att.Mult_SpeedMult = 0.9
-att.Mult_ShootSpeedMult = 0.8
+att.Mult_ShootSpeedMult = 0.9
 
 att.Mult_DrawTime = 1.25
 att.Mult_HolsterTime = 1.25
