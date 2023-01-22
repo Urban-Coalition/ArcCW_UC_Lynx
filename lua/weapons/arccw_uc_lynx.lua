@@ -361,7 +361,7 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 end
 
 SWEP.Hook_SelectFixAnim = function(wep, anim)
-	local SLOT = wep.Attachments[7].Installed
+	local SLOT = wep.Attachments[8].Installed
 	if SLOT == "uc_lynx_mag_50" then
 		return "fix_drum"
 	end
@@ -405,7 +405,7 @@ SWEP.Animations = {
 		Time = 2.0,
 		SoundTable = {
 			{s = common .. "raise.ogg",					t = 0 },
-			{s = path .. "chback.ogg",					t = 0.8 },
+			{s = path .. "chback.ogg",					t = 0.7 },
 			{s = path .. "chforward.ogg",				t = 1.0 },
 			{s = common .. "shoulder.ogg",				t = 1.9 },
 		},
@@ -417,9 +417,9 @@ SWEP.Animations = {
 	},
 	["fix_drum"] = {
 		Source = "fix_drum",
-		Time = 2.4,
+		Time = 2.6,
 		SoundTable = {
-			{s = path .. "chback.ogg",					t = 0.9 },
+			{s = path .. "chback.ogg",					t = 1.0 },
 			{s = path .. "chforward.ogg",				t = 1.35 },
 		},
 		LHIK = true,
@@ -477,9 +477,9 @@ SWEP.Animations = {
 		},
 	},
 	["reload"] = {
-		Source = "reload",
-		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-		Time = 2.2,
+		Source = "reloadalt",
+		TaltPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+		Time = 1.9,
 		MinProgress = 1.4,
 		LHIK = true,
 		LHIKEaseIn = 0.1,
@@ -491,17 +491,17 @@ SWEP.Animations = {
 			{s = ratel,								t = 0.05 },
 			{s = path .. "magout.ogg",				t = 0.2 },
 			{s = common .. "magpouch.ogg",			t = 0.6 },
-			{s = path .. "struggle.ogg", 			t = 0.7 },
-			{s = path .. "magin.ogg", 				t = 1.1 },
-			{s = ratel,								t = 1.3 },
-			{s = rottle,							t = 1.5 },
-			{s = path .. "grab.ogg",				t = 1.6 },
-			{s = path .. "shoulder.ogg",			t = 1.9 },
+			--{s = path .. "struggle.ogg", 			t = 0.7 },
+			{s = path .. "magin.ogg", 				t = 0.8 },
+			{s = ratel,								t = 1.2 },
+			{s = rottle,							t = 1.3 },
+			{s = path .. "grab.ogg",				t = 1.4 },
+			{s = path .. "shoulder.ogg",			t = 1.6 },
 		},
 	},
 	["reload_empty"] = {
-		Source = "reload_empty",
-		Time = 3.3,
+		Source = "reloadalt_empty",
+		Time = 3.1,
 		MinProgress = 2.2,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
@@ -514,13 +514,13 @@ SWEP.Animations = {
 			{s = ratel,								t = 0.05},
 			{s = path .. "magout.ogg",				t = 0.1 },
 			{s = common .. "magpouch.ogg",			t = 0.7 },
-			{s = path .. "struggle.ogg", 			t = 1.1 },
-			{s = path .. "magin.ogg", 				t = 1.4 },
-			{s = ratel,								t = 1.6 },
-			{s = rottle,							t = 1.6 },
-			{s = path .. "chforward.ogg",			t = 2.0 },
-			{s = path .. "grab.ogg",				t = 2.6, v = 0.5 },
-			{s = path .. "shoulder.ogg",			t = 2.8, v = 0.5 },
+			-- {s = path .. "struggle.ogg", 			t = 0.9 },
+			{s = path .. "magin.ogg", 				t = 1.1 },
+			{s = ratel,								t = 1.3 },
+			{s = rottle,							t = 1.3 },
+			{s = path .. "chforward.ogg",			t = 1.7 },
+			{s = path .. "grab.ogg",				t = 2.4, v = 0.5 },
+			{s = path .. "shoulder.ogg",			t = 2.55, v = 0.5 },
 		},
 	},
 		["reload_100"] = {
