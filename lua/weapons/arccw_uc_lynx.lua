@@ -33,15 +33,15 @@ SWEP.WorldModelOffset = {
 	bone    =    "ValveBiped.Bip01_R_Hand",
 }
 
-SWEP.Damage = 40
-SWEP.DamageMin = 15
+SWEP.Damage = ArcCW.UC.StdDmg["300blk"].max
+SWEP.DamageMin = ArcCW.UC.StdDmg["300blk"].min
 SWEP.RangeMin = 40
 SWEP.Range = 220
-SWEP.Penetration = 12
+SWEP.Penetration = ArcCW.UC.StdDmg["300blk"].pen
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 300
-SWEP.PhysBulletMuzzleVelocity = 300
+SWEP.MuzzleVelocity = 310
+SWEP.PhysBulletMuzzleVelocity = 310
 -- IN M/S
 
 SWEP.ChamberSize = 1
@@ -78,7 +78,7 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = {"weapon_ar2","weapon_smg1"}
 SWEP.NPCWeight = 200
 
-SWEP.AccuracyMOA = 5
+SWEP.AccuracyMOA = 10
 SWEP.HipDispersion = 500
 SWEP.MoveDispersion = 200
 SWEP.JumpDispersion = 1000
