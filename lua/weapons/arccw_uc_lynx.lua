@@ -7,7 +7,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "Lynx CQ300"
 SWEP.TrueName = "Honey Badger"
 SWEP.Trivia_Class = "Personal Defense Weapon"
-SWEP.Trivia_Desc = "Versatile PDW that is often configured integrally suppressed.\nChambered in .300 AAC Blackout, it is designed to have the ease of use and similarity of an AR-15, but the portability of an MP5."
+SWEP.Trivia_Desc = "Versatile PDW, developed in close co-operation with American Special Operations units.\nOften configured integrally suppressed.\nChambered in .300 AAC Blackout, it is designed to have the ease of use and similarity of an AR-15, but the portability of an MP5."
 SWEP.Trivia_Manufacturer = "Q, LLC"
 SWEP.Trivia_Calibre = ".300 AAC Blackout"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
@@ -216,12 +216,12 @@ SWEP.AttachmentElements = {
 	},
 	["uc_lynx_stock_compact"] = {
 		VMBodygroups = {
-			{ind = 5, bg = 2}
+			{ind = 6, bg = 1}
 		},
 	},
 	["uc_lynx_stock_none"] = {
 		VMBodygroups = {
-			{ind = 5, bg = 1}
+			{ind = 6, bg = 2}
 		},
 	},
 }
@@ -477,7 +477,7 @@ SWEP.Animations = {
 		},
 	},
 	["reload"] = {
-		Source = "reloadalt",
+		Source = "reload",
 		TaltPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		Time = 1.9,
 		MinProgress = 1.4,
@@ -500,7 +500,7 @@ SWEP.Animations = {
 		},
 	},
 	["reload_empty"] = {
-		Source = "reloadalt_empty",
+		Source = "reload_empty",
 		Time = 3.1,
 		MinProgress = 2.2,
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
