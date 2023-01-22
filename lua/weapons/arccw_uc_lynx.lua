@@ -204,7 +204,7 @@ SWEP.AttachmentElements = {
 			{ind = 3, bg = 1},
 		},
 	},
-	["uc_lynx_mag_50"] = {
+	["uc_lynx_mag_60"] = {
 		VMBodygroups = {
 			{ind = 4, bg = 2},
 		},
@@ -355,7 +355,7 @@ SWEP.Attachments = {
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 	local SLOT = wep.Attachments[8].Installed
-	if SLOT == "uc_lynx_mag_50" then ---xmag---
+	if SLOT == "uc_lynx_mag_60" then ---xmag---
 		if anim == "reload_empty" then
 			return "reload_empty_100"
 		elseif anim == "reload" then
@@ -372,7 +372,7 @@ end
 
 SWEP.Hook_SelectFixAnim = function(wep, anim)
 	local SLOT = wep.Attachments[8].Installed
-	if SLOT == "uc_lynx_mag_50" then
+	if SLOT == "uc_lynx_mag_60" then
 		return "fix_drum"
 	end
 end
