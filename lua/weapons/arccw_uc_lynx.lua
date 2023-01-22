@@ -97,9 +97,9 @@ SWEP.ShootVol = 115
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0.04
 
-local path = ")^weapons/arccw_uc_badger/"
-local path1 = ")^weapons/arccw_ud/uzi/"
-local common = ")^/arccw_uc/common/"
+local path = ")uc/badger/"
+local path1 = ")weapons/arccw_ud/uzi/"
+local common = ")arccw_uc/common/"
 
 SWEP.ShootSound = {
 	path .. "fire-01.ogg",
@@ -187,13 +187,12 @@ SWEP.AttachmentElements = {
 			{ind = 5, bg = 1}
 		},
 	},
-	["uc_lynx_barrel_extended"] = {
+	["uc_lynx_barrel_16"] = {
 		VMBodygroups = {
 			{ind = 1, bg = 1},
-			{ind = 3, bg = 1},
 		},
 	},
-	["uc_lynx_barrel_sbrhg"] = {
+	["uc_lynx_handguard_long"] = {
 		VMBodygroups = {
 			{ind = 3, bg = 1},
 		},
@@ -237,8 +236,12 @@ SWEP.Attachments = {
 	{
 		PrintName = "Barrel",
 		DefaultAttName = "7\" SBR Barrel",
-		DefaultAttIcon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips"),
 		Slot = "uc_lynx_barrel",
+	},
+	{
+		PrintName = "Handguard",
+		DefaultAttName = "SBR Handguard",
+		Slot = "uc_lynx_handguard",
 	},
 	{
 		PrintName = "Muzzle",
@@ -264,7 +267,7 @@ SWEP.Attachments = {
 			vmax = Vector(0, 8, 0.6),
 		},
 		InstalledEles = {"grip"},
-		MergeSlots = {13},
+		MergeSlots = {14},
 	},
 	{
 		PrintName = "Tactical",

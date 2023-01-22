@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture					"uc/badger/mbus_d_tan"
+	$bumpmap						"uc/badger/mbus_n"
+	$phongexponenttexture			"uc/badger/mbus_m"
+	
+	$phong							1
+	$phongboost						1
+	$phongfresnelranges				"[0.1 0.4 0.7]"
+}

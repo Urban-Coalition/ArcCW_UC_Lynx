@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture					"uc/badger/t_1p_ammunition_d"
+	$bumpmap						"uc/badger/t_1p_ammunition_n"
+	$phongexponenttexture			"uc/badger/t_1p_ammunition_m"
+	
+	$phong							1
+	$phongboost						1
+	$phongfresnelranges				"[0.1 0.4 0.7]"
+}

@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "uc/badger/t_1p_hb_d"
+	"$bumpmap" "uc/badger/t_1p_hb_n"
+
+	"$phongexponenttexture" "uc/badger/t_1p_hb_m"
+	"$phongalbedotint"	"1"
+
+	"$color2"			"[1 1 1]"
+	"$translucent"		"1"
+
+	"$phong" "1"
+	"$phongboost"	"1.5"
+
+	"$phongfresnelranges"	"[0.87 0.9 1]"
+}
