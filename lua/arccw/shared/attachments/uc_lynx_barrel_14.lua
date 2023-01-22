@@ -1,5 +1,5 @@
 att.PrintName = "14.5\" Extended Barrel"
-att.Icon = Material("entities/acwatt_uc_lynx_barrel_16.png")
+att.Icon = Material("entities/att/acwatt_uc_lynx_barrel_14.png", "mips smooth")
 att.Description = "Carbine length barrel. Significantly enhances ballistic performance and recoil control at the cost of handling."
 
 att.AutoStats = true

@@ -243,11 +243,13 @@ SWEP.Attachments = {
 	{
 		PrintName = "Barrel",
 		DefaultAttName = "7\" SBR Barrel",
+		DefaultAttIcon = Material("entities/att/acwatt_uc_lynx_barrel_7.png", "smooth mips"),
 		Slot = "uc_lynx_barrel",
 	},
 	{
 		PrintName = "Handguard",
 		DefaultAttName = "SBR Handguard",
+		DefaultAttIcon = Material("entities/att/acwatt_uc_lynx_hg_short.png", "smooth mips"),
 		Slot = "uc_lynx_handguard",
 	},
 	{
@@ -290,6 +292,7 @@ SWEP.Attachments = {
 	{
 		PrintName = "Stock",
 		DefaultAttName = "Extended Stock",
+		DefaultAttIcon = Material("entities/att/acwatt_uc_lynx_stock_extended.png", "smooth mips"),
 		Slot = {"go_stock", "uc_lynx_stock"},
 		Bone = "wpn",
 		Offset = {
@@ -303,7 +306,7 @@ SWEP.Attachments = {
 		PrintName = "Magazine",
 		Slot = {"uc_lynx_mag"},
 		DefaultAttName = "30-Round Mag",
-		DefaultAttIcon = Material("entities/att/acwatt_ud_m16_mag_30.png", "smooth mips"),
+		DefaultAttIcon = Material("entities/att/acwatt_uc_lynx_mag_30.png", "smooth mips"),
 		ExcludeFlags = {"uc_lynx_caliber_45"}
 	},
 	{
