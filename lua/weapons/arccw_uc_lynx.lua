@@ -122,12 +122,12 @@ SWEP.ShootSoundSilenced = {
 local tail = ")/arccw_uc/common/300blk/"
 
 SWEP.DistantShootSoundOutdoors = {
-    tail .. "fire-dist-300blk-rif-ext-01.ogg",
-    tail .. "fire-dist-300blk-rif-ext-02.ogg",
-    tail .. "fire-dist-300blk-rif-ext-03.ogg",
-    tail .. "fire-dist-300blk-rif-ext-04.ogg",
-    tail .. "fire-dist-300blk-rif-ext-05.ogg",
-    tail .. "fire-dist-300blk-rif-ext-06.ogg"
+	tail .. "fire-dist-300blk-rif-ext-01.ogg",
+	tail .. "fire-dist-300blk-rif-ext-02.ogg",
+	tail .. "fire-dist-300blk-rif-ext-03.ogg",
+	tail .. "fire-dist-300blk-rif-ext-04.ogg",
+	tail .. "fire-dist-300blk-rif-ext-05.ogg",
+	tail .. "fire-dist-300blk-rif-ext-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
 	common .. "fire-dist-int-rifle-01.ogg",
@@ -510,8 +510,8 @@ SWEP.Animations = {
 	},
 	["reload"] = {
 		Source = "reload",
-		TaltPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-		Time = 1.9,
+		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+		Time = 2.0,
 		MinProgress = 1.4,
 		LHIK = true,
 		LHIKEaseIn = 0.1,
@@ -523,20 +523,20 @@ SWEP.Animations = {
 			{s = ratel,								t = 0.05},
 			{s = path .. "magout.ogg",				t = 0.2 },
 			{s = common .. "magpouch.ogg",			t = 0.45},
-			{s = path .. "struggle.ogg", 			t = 0.6 },
-            {s = common .. "rifle_magdrop.ogg",  t = 0.65, v = 0.75},
-			{s = path .. "magin.ogg", 				t = 0.8 },
-			{s = ratel,								t = 1.0 },
-			{s = rottle,							t = 1.1 },
-			{s = path .. "grab.ogg",				t = 1.2 },
-			{s = path .. "shoulder.ogg",			t = 1.4 },
+			{s = path .. "struggle.ogg", 			t = 0.7 },
+			{s = common .. "rifle_magdrop.ogg",		t = 0.75, v = 0.75},
+			{s = path .. "magin.ogg", 				t = 0.9 },
+			{s = ratel,								t = 1.1 },
+			{s = rottle,							t = 1.2 },
+			{s = path .. "grab.ogg",				t = 1.3 },
+			{s = path .. "shoulder.ogg",			t = 1.5 },
 		},
 	},
 	["reload_empty"] = {
 		Source = "reload_empty",
+		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		Time = 3.1,
 		MinProgress = 2.2,
-		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
 		LHIKEaseIn = 0.1,
 		LHIKIn = 0.2,
@@ -547,7 +547,7 @@ SWEP.Animations = {
 			{s = ratel,								t = 0.05},
 			{s = path .. "magout.ogg",				t = 0.1 },
 			{s = common .. "magpouch.ogg",			t = 0.7 },
-            {s = common .. "rifle_magdrop.ogg",  t = 0.75, v = 0.75},
+			{s = common .. "rifle_magdrop.ogg",  t = 0.75, v = 0.75},
 			{s = path .. "struggle.ogg", 			t = 0.8 },
 			{s = path .. "magin.ogg", 				t = 1.1 },
 			{s = ratel,								t = 1.3 },
