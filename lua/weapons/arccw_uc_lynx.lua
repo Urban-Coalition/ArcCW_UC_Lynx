@@ -318,10 +318,10 @@ SWEP.Attachments = {
 		Slot = {"go_stock", "uc_lynx_stock"},
 		Bone = "wpn",
 		Offset = {
-			vpos = Vector(0, -4, 1.0),
+			vpos = Vector(0.0, -3.7, 1.1),
 			vang = Angle(90, -90, -90),
 		},
-		VMScale = Vector(1.1, 1.1, 1.1),
+		VMScale = Vector(1, 1, 1),
 		InstalledEles = {"uc_lynx_stock_none"},
 	},
 	{
