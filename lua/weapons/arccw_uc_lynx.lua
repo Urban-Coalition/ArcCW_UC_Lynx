@@ -119,7 +119,7 @@ SWEP.ShootSoundSilenced = {
 	path .. "fire-sup-06.ogg"
 }
 
-local tail = ")^/arccw_uc/common/300blk/"
+local tail = ")/arccw_uc/common/300blk/"
 
 SWEP.DistantShootSoundOutdoors = {
     tail .. "fire-dist-300blk-rif-ext-01.ogg",
@@ -418,7 +418,7 @@ SWEP.Hook_Think = ArcCW.UC.ADSReload
 SWEP.ReloadInSights = true
 SWEP.LockSightsInReload = false
 
-local common = ")^/arccw_uc/common/"
+local common = ")/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 local mech = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg" }
@@ -523,7 +523,7 @@ SWEP.Animations = {
 			{s = ratel,								t = 0.05},
 			{s = path .. "magout.ogg",				t = 0.2 },
 			{s = common .. "magpouch.ogg",			t = 0.45},
-			--{s = path .. "struggle.ogg", 			t = 0.6 }, fuck you fay sug
+			{s = path .. "struggle.ogg", 			t = 0.6 },
             {s = common .. "rifle_magdrop.ogg",  t = 0.65, v = 0.75},
 			{s = path .. "magin.ogg", 				t = 0.8 },
 			{s = ratel,								t = 1.0 },
@@ -548,7 +548,7 @@ SWEP.Animations = {
 			{s = path .. "magout.ogg",				t = 0.1 },
 			{s = common .. "magpouch.ogg",			t = 0.7 },
             {s = common .. "rifle_magdrop.ogg",  t = 0.75, v = 0.75},
-			--{s = path .. "struggle.ogg", 			t = 0.8 }, im keeping this shit uncommented on my end BITCH!!!!!!!! - r zeeny
+			{s = path .. "struggle.ogg", 			t = 0.8 },
 			{s = path .. "magin.ogg", 				t = 1.1 },
 			{s = ratel,								t = 1.3 },
 			{s = rottle,							t = 1.3 },
