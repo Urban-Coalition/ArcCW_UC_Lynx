@@ -28,7 +28,7 @@ SWEP.ViewModelFOV	=	80
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-	pos        =    Vector(-2, 4.5, -6.5),
+	pos        =    Vector(-5, 4.5, -7.5),
 	ang        =    Angle(0, 0, 180),
 	bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -306,7 +306,7 @@ SWEP.Attachments = {
 		Slot = "tac",
 		Bone = "wpn",
 		Offset = {
-			vpos = Vector(-0.98, 5.4, 1.36),
+			vpos = Vector(-0.98, 7.4, 1.36),
 			vang = Angle(0, -90, -90),
 		},
 		InstalledEles = {"grip"},
