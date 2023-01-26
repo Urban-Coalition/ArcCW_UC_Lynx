@@ -28,8 +28,8 @@ SWEP.ViewModelFOV	=	80
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-	pos        =    Vector(-5, 4.5, -7.5),
-	ang        =    Angle(0, 0, 180),
+	pos        =    Vector(-6, 4.5, -5.2),
+	ang        =    Angle(-12, 0, 180),
 	bone    =    "ValveBiped.Bip01_R_Hand",
 }
 
@@ -515,8 +515,8 @@ SWEP.Animations = {
 		MinProgress = 1.4,
 		LHIK = true,
 		LHIKEaseIn = 0.1,
-		LHIKIn = 0.2,
-		LHIKOut = 0.6,
+		LHIKIn = 0.25,
+		LHIKOut = 0.7,
 		LHIKEaseOut = 0.2,
 		SoundTable = {
 			{s = rottle,							t = 0.0 },
@@ -619,8 +619,8 @@ SWEP.Animations = {
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
 		LHIKEaseIn = 0.1,
-		LHIKIn = 0.2,
-		LHIKOut = 0.7,
+		LHIKIn = 0.25,
+		LHIKOut = 0.75,
 		LHIKEaseOut = 0.2,
 		SoundTable = {
 			{s = rottle,							t = 0.0 },
@@ -641,8 +641,8 @@ SWEP.Animations = {
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		LHIK = true,
 		LHIKEaseIn = 0.1,
-		LHIKIn = 0.2,
-		LHIKOut = 0.6,
+		LHIKIn = 0.3,
+		LHIKOut = 0.8,
 		LHIKEaseOut = 0.2,
 		SoundTable = {
 			{s = rottle,							t = 0.0 },
