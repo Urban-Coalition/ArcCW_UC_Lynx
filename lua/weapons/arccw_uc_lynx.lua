@@ -422,6 +422,7 @@ local common = ")/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 local mech = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg" }
+local mech1 = common .. "common_mech_light.ogg"
 
 SWEP.Animations = {
 	["idle"] = {
@@ -498,14 +499,15 @@ SWEP.Animations = {
 		Source = "firelast",
 		ShellEjectAt = 0,
 		SoundTable = {
-			{ s = mech, t = 0 }
+			{ s = mech, t = 0 },
 		},
 	},
 	["fire_sights"] = {
 		Source = "fire_sights",
 		ShellEjectAt = 0,
 		SoundTable = {
-			{ s = mech, t = 0 }
+			{ s = mech, t = 0 },
+            { s = mech1, t = 0, v = 0.5 }
 		},
 	},
 	["reload"] = {
