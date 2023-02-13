@@ -1,16 +1,24 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "uc/badger/t_1p_hb_d"
-	"$bumpmap" "uc/badger/t_1p_hb_n"
+	"$basetexture" 				"uc/badger/t_1p_hb_d"
+	"$bumpmap" 				"uc/badger/t_1p_hb_n"
+	
+	"$color2" 				"[1.5 1.5 1.5]"
 
-	"$phongexponenttexture" "uc/badger/t_1p_hb_m"
-	"$phongalbedotint"	"1"
+	"$phong" 				"1"
+	"$phongexponenttexture" 			"uc/badger/t_1p_hb_m"
+	"$phongboost"				"5"
+	"$phongalbedotint" 				"1"
+	"$phongfresnelranges" 			"[2 2.5 2.0]"
 
-	"$color2"			"[1 1 1]"
-	"$translucent"		"1"
 
-	"$phong" "1"
-	"$phongboost"	"1.5"
+	"$envmap" 				"env_cubemap"
+	"$envmaptint" 				"[.035 .035 .035]"
 
-	"$phongfresnelranges"	"[0.87 0.9 1]"
+	"$normalmapalphaenvmapmask" 		"1"
+	"$blendTintByBaseAlpha"			"1"
+
+	"$nocull"					"1"
+
+
 }
