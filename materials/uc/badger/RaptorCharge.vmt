@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "uc/badger/ChargeRaptor_B"
+	"$bumpmap" "uc/badger/ChargeRaptor_N"
+}
