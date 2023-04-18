@@ -517,9 +517,9 @@ SWEP.Animations = {
 		MinProgress = 1.1,
 		LHIK = true,
 		LHIKEaseIn = 0.1,
-		LHIKIn = 0.25,
-		LHIKOut = 0.7,
-		LHIKEaseOut = 0.2,
+		LHIKIn = 0.1,
+		LHIKOut = 0.8,
+		LHIKEaseOut = 0.3,
 		SoundTable = {
 			{s = rottle,							t = 0.0 },
 			{s = ratel,								t = 0.05},
